@@ -86,7 +86,7 @@ team_abrv_dict = {
 
 print('Saving files...')
 
-pickle.dump(team_nickname_dict, open( 'C:/Users/evanl/OneDrive/Desktop/DS Projects/NBA Injury Project/Scraped_Data/teams_nickname_dictionary.p', "wb" ) )
-pickle.dump(team_abrv_dict, open( 'C:/Users/evanl/OneDrive/Desktop/DS Projects/NBA Injury Project/Scraped_Data/teams_abrv_dictionary.p', "wb" ) )
+pickle.dump(team_nickname_dict, open( '../../references/01_dictionaries/teams_nickname_dictionary.p', "wb" ) )
+pickle.dump(team_abrv_dict, open( '../../references/01_dictionaries/teams_abrv_dictionary.p', "wb" ) )
 
 print('Finished')
