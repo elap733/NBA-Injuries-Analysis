@@ -19,30 +19,22 @@ The objective of this project was to determine if serious injuries **_are_** rea
 ### Data Sources
 1. Injury Data
 NBA injury data was scraped from the website [_Prosport Transactions_ ](http://prosportstransactions.com/). This site maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions types were particularily useful: 
-  * **Movement to/from injured/inactive list (IL)**
-  * **Missed games due to injury/personal reasons**
+   * **Movement to/from injured/inactive list (IL)**
+   * **Missed games due to injury/personal reasons**
   An "transaction" event in this database looks like the following:
   
   
 2. NBA Schedule Data
 Team schedules(2010-2019) were scraped from the website [ Basketball Reference ] (http://basketballreference.com/) in order to:
-  * Determine how many games a player missed due to injury
-  * When an injury occured (season type (regular, post, or offseason) and game number)
+   * Determine how many games a player missed due to injury
+   * When an injury occured (season type (regular, post, or offseason) and game number)
 3. NBA Player Statistics/Bio Data
 Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [ Basketball Reference ] (http://basketballreference.com/).
 
 
+### What Makes This NBA Injury Analysis Unique
 
-1. Scrape Data
-
-2. Clean Data
-3. Process Data
-4. Visualize Data
-
-### Data Challenges
-
-Analysis of historical NBA injury data is hindered by the lack of a NBA does not maintain a database of injury history. In 
-
+While this project does not claim to be the first use of [_Prosport Transactions_ ](http://prosportstransactions.com/) NBA transaction data for the purposes of analyzing injury trends; it is unique in that it ties both NBA schedule data and player stats/bio to these transactions. The merging of transactions and schedule data allows one to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" occured. Not all injuries are created equal - the missed games for a sore hamstring is not the same as a torn achilles. The merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
 
 
 ### Approach
