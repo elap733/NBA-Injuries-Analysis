@@ -28,7 +28,8 @@ The objective of this project was to determine if serious injuries **_are_** rea
       * This transaction type occurs when a player is placed on the Inactive List. Serious injuries typically result in a player being placed on their team's Inactive List; this allows another player to assume their spot on the Active List.
    
    An "transaction" event in this database looks like the following:
-  
+
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg"> 
   
 2. **NBA Schedule Data**
 
