@@ -28,9 +28,14 @@ The objective of this project was to determine if serious injuries **_are_** rea
       * This transaction type occurs when a player is placed on the Inactive List. Serious injuries typically result in a player being placed on their team's Inactive List; this allows another player to assume their spot on the Active List.
    
    An "transaction" event in this database looks like the following:
-
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg"> 
-  
+The information provided:
+   * 'Date' - Date of missed game/ movement to IL 
+   * 'Team' - The player's team
+   * 'Acquired' - The name of the player returning to lineup.
+   * 'Relinquished' - The name of the player missing a game or placed on the IL.
+   * 'Notes' - A description of the event and injury (sometimes).
+   
 2. **NBA Schedule Data**
 
    Team schedules(2010-2019) were scraped from the website [Basketball Reference](http://basketballreference.com/) in order to:
