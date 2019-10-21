@@ -6,11 +6,11 @@ This README provides an overview of the NBA-Injury-Analyses project; a project t
 * [Objective](#objective)
 * [Data Sources](#data-sources)
 * [What Makes This NBA Injury Analysis Unique?](#what-makes-this-nba-injury-analysis-unique?)
-* [Results Highlights](#results-highlights)
-* [Conclusion and Future Work](#conclusion-and-future-work)
+* [Results](#results)
+* [Conclusion](#conclusion)
 * [Detailed Jupyter Notebooks](#detailed_jupyter_notebooks)
 ### Motivation	
-The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (_see pictures below_). In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tear, Achilles, fractured bones), which in turn cause them to miss significant playing time, often detrimentally impacting their team's success.
+The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (see pictures below). In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tear, Achilles, fractured bones), which in turn cause them to miss significant playing time, often detrimentally impacting their team's success.
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/injury.png)
 *Fig.1: (L) Kevin Durant's achilles tear; (R) Klay Thompson's torn MCL in the 2018/2019 NBA Finals*
@@ -21,7 +21,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 ### Data Sources
 1. **Injury Data**
 
-   NBA injury data was scraped from the website [_Prosport Transactions_ ](http://prosportstransactions.com/). This site maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions types were particularily useful: 
+   NBA injury data was scraped from the website [Prosport Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions types were particularily useful: 
    * **Movement to/from injured/inactive list (IL)**
    * **Missed games due to injury/personal reasons**
    
@@ -30,7 +30,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
   
 2. **NBA Schedule Data**
 
-   Team schedules(2010-2019) were scraped from the website [ Basketball Reference ](http://basketballreference.com/) in order to:
+   Team schedules(2010-2019) were scraped from the website [Basketball Reference](http://basketballreference.com/) in order to:
    * **Determine how many games a player missed due to injury**
    * **When an injury occured (season type (regular, post, or offseason) and game number)**
    
@@ -41,15 +41,15 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
 ### What Makes This NBA Injury Analysis Unique?
 
-While I do not claim that this project is the first to use [_Prosport Transactions_ ](http://prosportstransactions.com/) data for the purposes of analyzing injury trends; I believe that it significantly advances these analyses by **tying both NBA schedule data and player stats/bio to transactions**, after careful cleaning and processing. 
+While I do not claim that this project is the first to use [Prosport Transactions](http://prosportstransactions.com/) data for the purposes of analyzing injury trends; I believe that it significantly advances these analyses by **tying both NBA schedule data and player stats/bio to transactions**, after careful cleaning and processing. 
 
 **The merging of transactions and schedule data allows one to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occured**. The latter is a poor metric for tracking injuries because it treats all injuries as equal (eg. a sore hamstring == a torn achilles)).After identifying the number of games missed due to each injury, one can identify separate serious injuries from minor.
 
 Additionally, the merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
 
-### Results Highlights
+### Results 
 
-### Conclusions and Future Work
+### Conclusions 
 
 ### Detailed Jupyter Notebooks
 
