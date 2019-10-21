@@ -1,5 +1,5 @@
 # NBA-Injuries-Analysis
-This README provides an overview of the NBA-Injury-Analyses project; a project to web-scrape, clean, process, and visualize National Basketball League injury data.  
+This README provides an overview of the NBA-Injury-Analyses project contained within this repository. This project consists of web-scraping (from multiple sources), intensive data cleaning, data processing (merging datasets, feature engineering), and the creation of visualizations to generate insights. 
 
 ## Table of contents
 * [Motivation](#motivation)
@@ -10,7 +10,7 @@ This README provides an overview of the NBA-Injury-Analyses project; a project t
 * [Conclusion](#conclusion)
 * [Detailed Jupyter Notebooks](#detailed_jupyter_notebooks)
 ### Motivation	
-The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (see pictures below). In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tear, Achilles, fractured bones), which in turn cause them to miss significant playing time, often detrimentally impacting their team's success.
+The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (Kevin Durant, Klay Thompson, DeMarcus Cousins, and Victor Oladipo to name a few). In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tears, achilles ruptures, lower leg fractures), which in turn cause them to miss significant playing time, often to the detriment of their team's success.
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/injury.png)
 *Fig.1: (L) Kevin Durant's achilles tear; (R) Klay Thompson's torn MCL in the 2018/2019 NBA Finals*
@@ -21,9 +21,11 @@ The objective of this project was to determine if serious injuries **_are_** rea
 ### Data Sources
 1. **NBA Injury Data**
 
-   NBA injury data was scraped from the website [Prosport Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions types were particularily useful: 
-   * **Movement to/from injured/inactive list (IL)**
-   * **Missed games due to injury/personal reasons**
+   NBA injury data was scraped from the website [Prosport Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two complementary transactions types were particularily useful: 
+   * **"Missed games due to injury/personal reasons"**
+      * This transaction type occurs when a player misses game while on their team's Active List (each team is only allowed to keep 11 players on its active list). These missed game events are typically short duration (1-3 games) 
+   * **"Movement to/from injured/inactive list (IL)"**
+      * This transaction type occurs when a player is placed on the Inactive List. Serious injuries typically result in a player being placed on their team's Inactive List; this allows another player to assume their spot on the Active List.
    
    An "transaction" event in this database looks like the following:
   
@@ -38,6 +40,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
    Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [Basketball Reference](http://basketballreference.com/).
 
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/serious_injury_body_map_2018.png"  width="400" height="400">
 
 ### What Makes This NBA Injury Analysis Unique?
 
