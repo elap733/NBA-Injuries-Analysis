@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a stacked bar chart of missed games due to injury. Each 
-bar represents a year.
+This script creates a bar chart of the injury events (or "transactions") each 
+season. Each bar represents a year.
 
 Required inputs:
     -mg_il_ps_merged_df.p
     
 Outputs:
-    -stacked bar chart
+    - bar chart
     
 @author: evanl
 """
@@ -26,7 +26,7 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/events.png'
+plot_savepath =  '../../results/01_plots/bar_plot_injury_events.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -55,7 +55,7 @@ ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Games Missed Due to Injury", fontsize =16,weight='bold')
+ax.set_ylabel("Injury Events", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
