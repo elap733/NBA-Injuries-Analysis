@@ -29,7 +29,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
    
    An "transaction" event in this database looks like the following:
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg"> 
-The information provided:
+   The information provided:
    * 'Date' - Date of missed game/ movement to IL 
    * 'Team' - The player's team
    * 'Acquired' - The name of the player returning to lineup.
