@@ -14,7 +14,19 @@ The outcome of the 2018/2019 NBA season was largely shaped by a rash of devastin
 *Fig.1: (L) Kevin Durant's achilles tear; (R) Klay Thompson's torn MCL in the 2018/2019 NBA Finals*
 
 ### Objective
-The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade.
+The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade. For the purposes of this analysis we nominally define "serious injuries" as those causing a player to miss 15 or more games.
+
+### Data Sources
+The website [_Prosport Transactions_ ](http://prosportstransactions.com/) maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions are types are particularily useful: 
+	*Movement to/from injured/inactive list (IL) 
+	*Missed games due to injury/personal reasons
+
+
+1. Scrape Data
+
+2. Clean Data
+3. Process Data
+4. Visualize Data
 
 ### Data Challenges
 
