@@ -17,7 +17,7 @@ The outcome of the 2018/2019 NBA season was largely shaped by a rash of devastin
 The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade. For the purposes of this analysis we nominally define "serious injuries" as those causing a player to miss 15 or more games.
 
 ### Data Sources
-1. Injury Data
+1. **Injury Data**
 
    NBA injury data was scraped from the website [_Prosport Transactions_ ](http://prosportstransactions.com/). This site maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions types were particularily useful: 
    * **Movement to/from injured/inactive list (IL)**
@@ -25,12 +25,13 @@ The objective of this project was to determine if serious injuries **_are_** rea
   An "transaction" event in this database looks like the following:
   
   
-2. NBA Schedule Data
+2. **NBA Schedule Data**
 
    Team schedules(2010-2019) were scraped from the website [ Basketball Reference ] (http://basketballreference.com/) in order to:
    * **Determine how many games a player missed due to injury**
    * **When an injury occured (season type (regular, post, or offseason) and game number)**
-3. NBA Player Statistics/Bio Data
+3. **NBA Player Statistics/Bio Data**
+
 Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [ Basketball Reference ] (http://basketballreference.com/).
 
 
