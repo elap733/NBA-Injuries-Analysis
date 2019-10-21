@@ -18,8 +18,11 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
 ### Data Sources
 The website [_Prosport Transactions_ ](http://prosportstransactions.com/) maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions are types are particularily useful: 
-	*Movement to/from injured/inactive list (IL) 
-	*Missed games due to injury/personal reasons
+  * Movement to/from injured/inactive list (IL)
+  
+   * Normally an NBA team can have a maximum of 15 players on its roster during a season,  A team normally has 12 or 13 players on its Active List, who are eligible to play in games, and can have as few as 11 for up to two weeks at a time. Any remaining players must be on the team's Inactive List, and are ineligible to play in games.
+   
+  * Missed games due to injury/personal reasons
 
 
 1. Scrape Data
