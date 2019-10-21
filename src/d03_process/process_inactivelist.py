@@ -28,6 +28,7 @@ from notes_filter import notes_filter
 import pandas as pd
 from datetime import timedelta
 import pickle
+import numpy as np
 
 pd.set_option('display.expand_frame_repr', False)
 
@@ -164,20 +165,30 @@ for row in placed_on_IL_events_df.itertuples():
     placed_on_IL_events_df['Season'][row.Index] = season_placed_on_IL
     placed_on_IL_events_df['Year'][row.Index] = year_placed_on_IL 
     placed_on_IL_events_df['Game_number'] [row.Index] = game_number_placed_on_IL 
-    
-#combine "acquired" and "relinquished" events into one data frame again
-all_inactive_events_df= pd.concat([placed_on_IL_events_df, acquired_events_df])
+
+#Convert 'Year' column dtype to 'int'
+placed_on_IL_events_df['Year'] = placed_on_IL_events_df['Year'].astype(int)
+
+#Drop rows that correspond to "activated" or "acquired" (e.g. player returning to lineup)
+placed_on_IL_events_df = placed_on_IL_events_df[placed_on_IL_events_df['Acquired'].isna()] #keep those rows where there is no player name in the 'acquired' column
+#Drop 'acquired' column
+placed_on_IL_events_df.drop(['Acquired'], axis = 1, inplace = True)
+
+#Convert "Reg_games_missed' and 'Post_games_missed' dtype to 'float'
+#Convert blanks in 'Reg_games_missed' and 'Post_games_missed' to NaN;  
+placed_on_IL_events_df['Reg_games_missed'].replace('', np.nan, inplace=True)
+placed_on_IL_events_df['Post_games_missed'].replace('', np.nan, inplace=True)
 
 #------------Processing - Section 2: Filter Notes --------------------
 print('Filtering notes')
-all_inactive_events_df['note_keyword'] = ''
-all_inactive_events_df['category'] = ''
+placed_on_IL_events_df['note_keyword'] = ''
+placed_on_IL_events_df['category'] = ''
 
 #apply notes_filter function to each row in dataframe
-all_inactive_events_df[['note_keyword', 'category']]= all_inactive_events_df.apply(notes_filter, axis = 1, result_type="expand")
+placed_on_IL_events_df[['note_keyword', 'category']]= placed_on_IL_events_df.apply(notes_filter, axis = 1, result_type="expand")
 
 #-----------------------Save Data-----------------------------
 print('Saving files......')
 #save file
-pickle.dump(all_inactive_events_df, open(savepath, "wb" ) )   
+pickle.dump(placed_on_IL_events_df, open(savepath, "wb" ) )   
 print('Finished')   

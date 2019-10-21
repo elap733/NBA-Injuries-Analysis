@@ -28,6 +28,7 @@ from notes_filter import notes_filter
 import pandas as pd
 from datetime import timedelta
 import pickle
+import numpy as np
 
 pd.set_option('display.expand_frame_repr', False)
 
@@ -132,8 +133,30 @@ for row in missed_games_events_df.itertuples():
     missed_games_events_df['Post_games_missed'][row.Index] = post_season_games_missed
     missed_games_events_df['Season'][row.Index] = season_mg_event
     missed_games_events_df['Year'][row.Index] = year_mg_event
-    missed_games_events_df['Game_number'] = game_number_mg_event
+    missed_games_events_df['Game_number'][row.Index] = game_number_mg_event
 
+#change 'Year' data type to int
+missed_games_events_df['Year'] = missed_games_events_df['Year'].astype(int)
+
+#add placeholder column to match inactive_list_events_df format
+missed_games_events_df['Out_for_season']= ""
+
+#Drop rows that correspond to "activated" or "acquired" (e.g. player returning to lineup)
+missed_games_events_df = missed_games_events_df[missed_games_events_df['Acquired'].isna()] #keep those rows where there is no player name in the 'acquired' column
+
+#Drop 'acquired' column
+missed_games_events_df.drop(['Acquired'], axis = 1, inplace = True)
+
+#Convert "Reg_games_missed' and 'Post_games_missed' dtype to 'float'
+#Convert blanks in 'Reg_games_missed' and 'Post_games_missed' to NaN
+missed_games_events_df['Reg_games_missed'].replace('', np.nan, inplace=True)
+missed_games_events_df['Post_games_missed'].replace('', np.nan, inplace=True)
+
+#reorder columns
+missed_games_events_df = missed_games_events_df[['Date', 'Team', 'Relinquished', 'Notes', 'Player',
+       'Reg_games_missed', 'Post_games_missed', 'Out_for_season', 'Season',
+       'Year', 'Game_number', 'note_keyword', 'category']]
+    
 #------------Processing - Section 2: Filter Notes --------------------
 print('Filtering notes')
 missed_games_events_df['note_keyword'] = ''
