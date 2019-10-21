@@ -4,9 +4,11 @@ This README provides an overview of the NBA-Injury-Analyses project; a project t
 ## Table of contents
 * [Motivation](#motivation)
 * [Objective](#objective)
-* [Results](#results)
-* [EDA Process](#eda-process)
-
+* [Data Sources](#data-sources)
+* [What Makes This NBA Injury Analysis Unique?](#what-makes-this-nba-injury-analysis-unique?)
+* [Results Highlights](#results-highlights)
+* [Conclusion and Future Work](#conclusion-and-future-work)
+* [Detailed Jupyter Notebooks](#detailed_jupyter_notebooks)
 ### Motivation	
 The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (_see pictures below_). In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tear, Achilles, fractured bones), which in turn cause them to miss significant playing time, often detrimentally impacting their team's success.
 
@@ -14,7 +16,7 @@ The outcome of the 2018/2019 NBA season was largely shaped by a rash of devastin
 *Fig.1: (L) Kevin Durant's achilles tear; (R) Klay Thompson's torn MCL in the 2018/2019 NBA Finals*
 
 ### Objective
-The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade. For the purposes of this analysis we nominally define "serious injuries" as those causing a player to miss 15 or more games.
+The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade. For the purposes of this analysis I nominally define "serious injuries" as those causing a player to miss 15 or more games.
 
 ### Data Sources
 1. **Injury Data**
@@ -39,27 +41,20 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
 ### What Makes This NBA Injury Analysis Unique?
 
-While I do not claim that this project is the first to use [_Prosport Transactions_ ](http://prosportstransactions.com/) data for the purposes of analyzing injury trends; it _is unique_ in that it **ties both NBA schedule data and player stats/bio to transactions**. 
+While I do not claim that this project is the first to use [_Prosport Transactions_ ](http://prosportstransactions.com/) data for the purposes of analyzing injury trends; I believe that it significantly advances these analyses by **tying both NBA schedule data and player stats/bio to transactions**, after careful cleaning and processing. 
 
 **The merging of transactions and schedule data allows one to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occured**. The latter is a poor metric for tracking injuries because it treats all injuries as equal (eg. a sore hamstring == a torn achilles)).After identifying the number of games missed due to each injury, one can identify separate serious injuries from minor.
 
-Additioanlly, the merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
+Additionally, the merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
 
+### Results Highlights
 
-### Approach
-Primary Data sources - prosportstransactions
-Schedule
+### Conclusions and Future Work
 
-### Differentiation From Other NBA Injury Analyses
-
+### Detailed Jupyter Notebooks
 
 
 
-### Objective
-### Results
-	
-## EDA Overview
-To run this project, install it locally using npm:
 
 ## Sources
 To run this project, install it locally using npm:
