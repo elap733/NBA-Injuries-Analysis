@@ -22,17 +22,19 @@ The objective of this project was to determine if serious injuries **_are_** rea
    NBA injury data was scraped from the website [_Prosport Transactions_ ](http://prosportstransactions.com/). This site maintains an open-source archive of sports transactions, including "the most complete database of pro basketball transactions available". For the purposes of this analysis two transactions types were particularily useful: 
    * **Movement to/from injured/inactive list (IL)**
    * **Missed games due to injury/personal reasons**
-  An "transaction" event in this database looks like the following:
+   
+   An "transaction" event in this database looks like the following:
   
   
 2. **NBA Schedule Data**
 
-   Team schedules(2010-2019) were scraped from the website [ Basketball Reference ] (http://basketballreference.com/) in order to:
+   Team schedules(2010-2019) were scraped from the website [ Basketball Reference ](http://basketballreference.com/) in order to:
    * **Determine how many games a player missed due to injury**
    * **When an injury occured (season type (regular, post, or offseason) and game number)**
+   
 3. **NBA Player Statistics/Bio Data**
 
-Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [ Basketball Reference ] (http://basketballreference.com/).
+Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [Basketball Reference](http://basketballreference.com/).
 
 
 ### What Makes This NBA Injury Analysis Unique
