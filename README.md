@@ -26,22 +26,20 @@ NBA injury data was scraped from the website [_Prosport Transactions_ ](http://p
   
 2. NBA Schedule Data
 Team schedules(2010-2019) were scraped from the website [ Basketball Reference ] (http://basketballreference.com/) in order to:
-   * Determine how many games a player missed due to injury
-   * When an injury occured (season type (regular, post, or offseason) and game number)
+   * **Determine how many games a player missed due to injury**
+   * **When an injury occured (season type (regular, post, or offseason) and game number)**
 3. NBA Player Statistics/Bio Data
 Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [ Basketball Reference ] (http://basketballreference.com/).
 
 
 ### What Makes This NBA Injury Analysis Unique
 
-While this project does not claim to be the first use of [_Prosport Transactions_ ](http://prosportstransactions.com/) data for the purposes of analyzing injury trends; it is unique in:
+While this project does not claim to be the first use of [_Prosport Transactions_ ](http://prosportstransactions.com/) data for the purposes of analyzing injury trends; it is unique in **that it ties both NBA schedule data and player stats/bio to these transactions**. 
 
-1. That it ties both NBA schedule data and player stats/bio to these transactions. 
+**The merging of transactions and schedule data allows one to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" occured (a naive metric that treats all injuries as equal (eg. a sore hamstring == a torn achilles)).** After identifying the number of games missed due to each injury, one can identify separate serious injuries from minor.
 
-   *The merging of transactions and schedule data allows one to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" occured (a naive metric that treats all injuries as equal (eg. a sore hamstring == a torn achilles). After identifying the number of games missed due to each injury, one can identify separate serious injuries from minor.
+Additioanlly, the merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
 
-   *The merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
-2. The degree to which the data is cleaned and process to facilitate further analysis.
 
 ### Approach
 Primary Data sources - prosportstransactions
