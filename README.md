@@ -1,5 +1,6 @@
 # NBA-Injuries-Analysis
-This project is an exploratory data analysis of National Basketball League injury data 
+This README provides an overview of the NBA-Injury-Analyses project; a project to web-scrape, clean, process, and visualize National Basketball League injury data.  
+
 ## Table of contents
 * [Motivation](#motivation)
 * [Objective](#objective)
@@ -14,6 +15,8 @@ The outcome of the 2018/2019 NBA season was largely shaped by a rash of devastin
 
 ### Objective
 The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade.
+
+To address this objective NBA injury data
 
 ### Differentiation From Other NBA Injury Analyses
 
