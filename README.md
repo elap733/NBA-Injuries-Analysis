@@ -38,13 +38,15 @@ The objective of this project was to determine if serious injuries **_are_** rea
    
 2. **NBA Schedule Data**
 
-   Team schedules(2010-2019) were scraped from the website [Basketball Reference](http://basketballreference.com/) in order to:
-   * **Determine how many games a player missed due to injury**
-   * **When an injury occured (season type (regular, post, or offseason) and game number)**
+   Team schedules(2010-2019) were scraped from the website [Basketball Reference](http://basketballreference.com/), allowing me to:
+   * *Determine how many games a player actually missed due to injury*
+   * *Determine when the missed game occured (game number and season - regular, post, or offseason) (regular, post, or offseason)*
    
 3. **NBA Player Statistics/Bio Data**
 
-   Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [Basketball Reference](http://basketballreference.com/).
+   Player statistics was also scraped from the website [Basketball Reference](http://basketballreference.com/), allowing me to:
+   * Examine correlations between player age, games played, and minutes per game with injury events
+   * Constrain analysis to players with a minimum amount of playing times (10 minutes per game average); this eliminates noise due to reserve/transient players.
 
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/serious_injury_body_map_2018.png"  width="400" height="400">
 
