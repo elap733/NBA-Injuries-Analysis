@@ -34,8 +34,14 @@ Player statistics (games played, minutes played) and bio (age, position) was als
 
 ### What Makes This NBA Injury Analysis Unique
 
-While this project does not claim to be the first use of [_Prosport Transactions_ ](http://prosportstransactions.com/) NBA transaction data for the purposes of analyzing injury trends; it is unique in that it ties both NBA schedule data and player stats/bio to these transactions. The merging of transactions and schedule data allows one to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" occured. Not all injuries are created equal - the missed games for a sore hamstring is not the same as a torn achilles. The merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
+While this project does not claim to be the first use of [_Prosport Transactions_ ](http://prosportstransactions.com/) data for the purposes of analyzing injury trends; it is unique in:
 
+1. That it ties both NBA schedule data and player stats/bio to these transactions. 
+
+   *The merging of transactions and schedule data allows one to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" occured (a naive metric that treats all injuries as equal (eg. a sore hamstring == a torn achilles). After identifying the number of games missed due to each injury, one can identify separate serious injuries from minor.
+
+   *The merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
+2. The degree to which the data is cleaned and process to facilitate further analysis.
 
 ### Approach
 Primary Data sources - prosportstransactions
