@@ -152,10 +152,6 @@ missed_games_events_df.drop(['Acquired'], axis = 1, inplace = True)
 missed_games_events_df['Reg_games_missed'].replace('', np.nan, inplace=True)
 missed_games_events_df['Post_games_missed'].replace('', np.nan, inplace=True)
 
-#reorder columns
-missed_games_events_df = missed_games_events_df[['Date', 'Team', 'Relinquished', 'Notes', 'Player',
-       'Reg_games_missed', 'Post_games_missed', 'Out_for_season', 'Season',
-       'Year', 'Game_number', 'note_keyword', 'category']]
     
 #------------Processing - Section 2: Filter Notes --------------------
 print('Filtering notes')
@@ -164,6 +160,11 @@ missed_games_events_df['category'] = ''
 
 #apply notes_filter function to each row in dataframe
 missed_games_events_df[['note_keyword', 'category']]= missed_games_events_df.apply(notes_filter, axis = 1, result_type="expand")
+
+#reorder columns
+missed_games_events_df = missed_games_events_df[['Date', 'Team', 'Relinquished', 'Notes', 'Player',
+       'Reg_games_missed', 'Post_games_missed', 'Out_for_season', 'Season',
+       'Year', 'Game_number', 'note_keyword', 'category']]
 
 #-----------------------Save Data-----------------------------
 print('Saving files......')

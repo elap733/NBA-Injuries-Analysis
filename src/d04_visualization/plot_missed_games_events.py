@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 This script creates a stacked bar chart of missed games due to injury. Each 
-bar represents a year, each stack with in the corrresponds to an injury "category"
-or "keyword".
+bar represents a year.
 
 Required inputs:
     -mg_il_ps_merged_df.p
@@ -27,16 +26,13 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/bar_missed_games_all_durations.png'
+plot_savepath =  '../../results/01_plots/events.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
 injury_df = pickle.load(open(injury_df_filepath, "rb" ) )
 
 #-------------------------Process Dataframe----------------------------------
-
-#Add a column for total (regular + post season) games missed
-injury_df['Tot_games_missed'] = injury_df['Reg_games_missed'] + injury_df['Post_games_missed']
 
 """Slice data set"""
 
@@ -50,7 +46,7 @@ injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','s
 #------------------------Make plots-------------------------------------------
 
 #group by year, category, and sum total missed games. Unstack to plot
-data = injury_df.groupby(['Year'])['Tot_games_missed'].sum()
+data = injury_df.groupby(['Year']).size()
 
 #create plot
 ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
