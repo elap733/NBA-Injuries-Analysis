@@ -78,7 +78,7 @@ for row in placed_on_IL_events_df.itertuples():
     game_number_placed_on_IL, game_date_placed_on_IL, season_placed_on_IL, year_placed_on_IL, team_total_num_games = correlate_event_to_game_schedule (team_schedules_df, row.Date, row.Team)
     
     #A flag to indicate if "placed on IL" event occurs on the first game of the season
-    if game_number_placed_on_IL == 1:
+    if (game_number_placed_on_IL == 1) & (season_placed_on_IL == 'regular'):
         start_of_season = 1
     else:
         start_of_season = 0 

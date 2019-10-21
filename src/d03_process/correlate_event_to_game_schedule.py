@@ -46,14 +46,21 @@ def correlate_event_to_game_schedule (team_schedules_df, event_date, event_team)
     if game_number != 1: # Event occured during the regular or post season
         season = closest_game_to_event_df['Season']
         year = closest_game_to_event_df['Year']
+        
+        #Find the total number of games the team played in during this season
+        team_total_num_games = team_schedules_df[(team_schedules_df['Team']==event_team) & (team_schedules_df['Season'] == season) & (team_schedules_df['Year'] == year)]['Game_num'].max()
+    
     elif (game_number == 1) & ((event_date == closest_game_to_event_df['Date']) or (event_date ==(closest_game_to_event_df['Date'] - timedelta(days=1)))): #event occured on either the day before the first day of the season or on the first day of the season
         season = closest_game_to_event_df['Season']
         year = closest_game_to_event_df['Year']
+        
+        #Find the total number of games the team played in during this season
+        team_total_num_games = team_schedules_df[(team_schedules_df['Team']==event_team) & (team_schedules_df['Season'] == season) & (team_schedules_df['Year'] == year)]['Game_num'].max()
+    
     else: #event occured in off season 
         season = 'off'
         year = str(int(closest_game_to_event_df['Year'])-1)
-        
-    ##Find the total number of games the team played in during this season
-    team_total_num_games = team_schedules_df[(team_schedules_df['Team']==event_team) & (team_schedules_df['Season'] == season) & (team_schedules_df['Year'] == year)]['Game_num'].max()
+        team_total_num_games = 0
    
+
     return game_number, game_date, season, year, team_total_num_games
