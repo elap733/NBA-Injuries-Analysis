@@ -38,6 +38,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
    Player statistics (games played, minutes played) and bio (age, position) was also scraped from the website [Basketball Reference](http://basketballreference.com/).
 
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/serious_injury_body_map_2018.png"  width="400" height="400">
 
 ### What Makes This NBA Injury Analysis Unique?
 
