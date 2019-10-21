@@ -1,21 +1,27 @@
 # NBA-Injuries-Analysis
- 
+This project is an exploratory data analysis of National Basketball League injury data 
 ## Table of contents
-* [Overview](#overview)
-	* [Motivation](#motivation)
-	* [Objective](#objective)
-	* [Results](#results)
+* [Motivation](#motivation)
+* [Objective](#objective)
+* [Results](#results)
 * [EDA Process](#eda-process)
-* [Sources](#sources
 
-## Motivation
-This project is an exploratory data analysis of National Basketball League injury data from the 2010/2011 - 2018/2019 seasons. 
-	
-## Objective
-Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+### Motivation	
+The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players. In recent years it **_seems_** like an increasing number of high profile players are experiencing serious injuries (ACL tear, Achilles, fractured bones), causing them to miss significant playing time.
+
+![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/injury.png)
+*Fig.1: (L) Kevin Durant's achilles tear; (R) Klay Thompson's torn MCL in the 2018/2019 NBA Finals*
+
+### Objective
+The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade.
+
+### Differentiation From Other NBA Injury Analyses
+
+
+
+
+### Objective
+### Results
 	
 ## EDA Overview
 To run this project, install it locally using npm:
