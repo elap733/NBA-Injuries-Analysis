@@ -49,7 +49,6 @@ for ax in sm.ravel():
     
 plt.show()
 
-plt.savefig(plot_savepath)
 #----------------------Save plot---------------------------------------------
-#fig = ax.get_figure()
-#fig.savefig(plot_savepath, dpi = 150, bbox_extra_artists=(), bbox_inches='tight')
+fig = ax.get_figure()
+fig.savefig(plot_savepath)
