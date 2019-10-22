@@ -5,7 +5,7 @@ This README provides an overview of the NBA-Injury-Analyses project contained wi
 * [Motivation](#motivation)
 * [Objective](#objective)
 * [Data Sources](#data-sources)
-* [What Makes This NBA Injury Analysis Unique?](#what-makes-this-nba-injury-analysis-unique?)
+* [What makes this NBA injury analysis unique?](#what-makes-this-nba-injury-analysis-unique?)
 * [Results](#results)
 * [Conclusion](#conclusion)
 * [Instructions for Using Repository](#instructions_for_using_repository)
@@ -31,10 +31,10 @@ The objective of this project was to determine if serious injuries **_are_** rea
    *  'Date' - Date of missed game/ movement to IL 
    *  'Team' - The player's team
    *  'Acquired' - The name of the player returning to lineup.
-   *  'Relinquished' - The name of the player missing a game or placed on the IL.
-   *  'Notes' - A description of the event and injury (sometimes).
+   *  'Relinquished' - The name of the player missing a game or placed on the IL
+   *  'Notes' - A description of the event and injury
    
-![image]("https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg")
+![image](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg)
 *Fig.2: Screenshot of search results from Prosports Transactions*
    
 2. **NBA Schedule Data**
@@ -49,7 +49,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
    * Examine correlations between player age and usage (games played, minutes played) and injury events
    * Constrain analysis to players with a minimum amount of playing times (I chose a 10 minutes per game average); this eliminates noise due to reserve/transient players.
 
-### What makes _this_ NBA injury analysis unique?
+### What makes this NBA injury analysis unique?
 
 This project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends, it is however the first (I believe) to **tie both NBA schedule data and player stats/bio to transactions. The merging of injury transactions and schedule data, is not a simple effort, but by doing this it allows me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occured**. The latter is actually a very poor metric for tracking injuries because it treats all injuries as equal (eg. a sore hamstring != a torn achilles)). Consider the plots below:
 
