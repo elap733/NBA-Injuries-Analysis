@@ -88,12 +88,13 @@ In addition to incorporating schedule data, this analysis also merges injury tra
 
 ### Correlations To Player Usage and Age
 
-
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/correlation_plots.png)
 
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/serious_injury_body_map_2018.png"  width="400" height="400">
 ## Conclusions 
 
 ## Repository Code Description
-
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/workflow.png)
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/folder_structure.png)
 ## Sources
 To run this project, install it locally using npm:
