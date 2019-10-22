@@ -21,7 +21,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 ## Data Sources
 1. **NBA Injury Data**
 
-   NBA injury data was scraped from the website [Prosports Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports "transactions", including "the most complete database of pro basketball transactions available". For the purposes of this analysis two complementary "transaction" types were particularily useful: 
+   I scraped NBA injury data from the website [Prosports Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports "transactions", including "the most complete database of pro basketball transactions available". For the purposes of this analysis two complementary "transaction" types were particularily useful: 
    * **"Missed games due to injury/personal reasons"**
       * This transaction (event) occurs when a player - who is currently on their team's active roster - misses a scheduled game. These missed game events are typically short duration (1-3 games) 
    * **"Movement to/from injured/inactive list (IL)"**
@@ -46,13 +46,13 @@ The objective of this project was to determine if serious injuries **_are_** rea
    
 2. **NBA Schedule Data**
 
-   Team schedules(2010-2019) were scraped from the website [Basketball Reference](http://basketballreference.com/), allowing me to:
+   I scraped team schedules(2010-2019) from the website [Basketball Reference](http://basketballreference.com/). This data allowed me to:
    * *Determine how many games a player actually missed due to injury*
    * *Determine when the missed game occured (game number and season - regular, post, or offseason)*
    
 3. **NBA Player Statistics/Bio Data**
 
-   Player statistics was also scraped from the website [Basketball Reference](http://basketballreference.com/), allowing me to:
+   I also scraped player statistics  from the website [Basketball Reference](http://basketballreference.com/), allowing me to:
    * Examine correlations between player age and usage (games played, minutes played) and injury events
    * Constrain analysis to players with a minimum amount of playing times (I chose a 10 minutes per game average); this eliminates noise due to reserve/transient players.
 
