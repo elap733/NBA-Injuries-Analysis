@@ -33,7 +33,8 @@ The objective of this project was to determine if serious injuries **_are_** rea
    *  'Acquired' - The name of the player returning to lineup.
    *  'Relinquished' - The name of the player missing a game or placed on the IL.
    *  'Notes' - A description of the event and injury (sometimes).
-![Ouch]("https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg")
+   
+![image]("https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg")
 *Fig.2: Screenshot of search results from Prosports Transactions*
    
 2. **NBA Schedule Data**
