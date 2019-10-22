@@ -32,7 +32,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
    *  'Team' - The player's team
    *  'Acquired' - The name of the player returning to lineup.
    *  'Relinquished' - The name of the player missing a game or placed on the IL.
-   *  'Notes' - A description of the event and injury (sometimes).
+   *  'Notes' - A description of the event/injury
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg"> 
 
 *Fig.2: Screenshot of search results from Prosports Transactions*
@@ -48,7 +48,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
    Team schedules(2010-2019) were scraped from the website [Basketball Reference](http://basketballreference.com/), allowing me to:
    * *Determine how many games a player actually missed due to injury*
-   * *Determine when the missed game occured (game number and season - regular, post, or offseason) (regular, post, or offseason)*
+   * *Determine when the missed game occured (game number and season - regular, post, or offseason)*
    
 3. **NBA Player Statistics/Bio Data**
 
