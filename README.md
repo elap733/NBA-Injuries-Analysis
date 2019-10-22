@@ -13,7 +13,7 @@ This README provides an overview of the NBA-Injury-Analyses project contained wi
 The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (Kevin Durant, Klay Thompson, DeMarcus Cousins, and Victor Oladipo to name a few). In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tears, achilles ruptures, lower leg fractures), which in turn cause these players to miss significant playing time - often to the detriment of their team's success.
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/injury.png)
-*Fig.1: (L) Kevin Durant's achilles tear; (R) Klay Thompson's torn ACL in the 2018/2019 NBA Finals*
+*Fig.1: (L) Kevin Durant's achilles rupture; (R) Klay Thompson's ACL tear in the 2018/2019 NBA Finals*
 
 ### Objective
 The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during past decade. For the purposes of this analysis I nominally define "serious injuries" as those causing a player to miss 15 or more games.
@@ -61,6 +61,8 @@ Admittedly, this project is not the first to use [Prosport Transactions](http://
 
 **Looking only at Figure: 1 (injury events (transactions)) one might come to the conclusion that the NBA's injury posture is much better today (2017-2018) than it was in the past (2010-2012). If we actually look at the number of games missed (Figure 2) we  see the _opposite_ story is true.** Furthmore, by identifying the number of games missed due to each injury, we can also separate serious injuries from minor.
 
+![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries.png)
+*Fig.5: Count of **serious injury events (> 15 games missed)** each season. (Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game)*
 
 In addition to incorporating schedule data, this analysis also merges injury transactions with player stats/bio data allowing to one look at how injuries correlate with player age and usage.
 
