@@ -8,7 +8,7 @@ This README provides an overview of the NBA-Injury-Analyses project contained wi
 * [What Makes This NBA Injury Analysis Unique?](#what-makes-this-nba-injury-analysis-unique?)
 * [Results](#results)
 * [Conclusion](#conclusion)
-* [Detailed Jupyter Notebooks](#detailed_jupyter_notebooks)
+* [Repositiory Code Description](#repository_code_description)
 ### Motivation	
 The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (Kevin Durant, Klay Thompson, DeMarcus Cousins, and Victor Oladipo to name a few). In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tears, achilles ruptures, lower leg fractures), which in turn cause them to miss significant playing time, often to the detriment of their team's success.
 
@@ -63,13 +63,16 @@ This project is not the first to use [Prosport Transactions](http://prosportstra
 In addition to incorporating schedule data, this analysis also merges injury transactions with player stats/bio data allowing to one look at how injuries correlate with player age and usage.
 
 ### Results 
+#### League-wide Injury Trends 
+#### Team Trends 
+#### Correlations To Player Usage and Age
+
+
+
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/serious_injury_body_map_2018.png"  width="400" height="400">
 ### Conclusions 
 
-### Detailed Jupyter Notebooks
-
-
-
+### Repository Code Description
 
 ## Sources
 To run this project, install it locally using npm:
