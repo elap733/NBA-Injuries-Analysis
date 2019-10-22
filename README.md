@@ -41,7 +41,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 <p align="center">
    <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/word_cloud.png">
    
-   *Fig.3: Word cloud of injury transaction "notes"*
+   *Fig.3: Word cloud of injury transaction "notes" built from transaction data from 2010-2019 NBA seasons*
 </p>
    
 2. **NBA Schedule Data**
