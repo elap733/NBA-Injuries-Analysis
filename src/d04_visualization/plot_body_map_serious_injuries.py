@@ -30,7 +30,7 @@ image_filepath =  '../../references/02_images/durant_silhouette.png'
 year = 2018
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/serious_injury_body_map_{}.png'.format(year)
+plot_savepath =  '../../results/01_plots/body_map_serious_injuries{}.png'.format(year)
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -225,7 +225,7 @@ ax.text(0.60, 0.77, ('{}/{} Season '.format(year, (year+1))), transform=ax.trans
 ax.text(0.685, 0.73, 'Missed Games', transform=ax.transAxes, fontsize=18, weight ='bold', verticalalignment='top')    
 
 # text box two
-ax.text(0.0001, 0.99, 'Serious Injuries Map', transform=ax.transAxes, fontsize=20, verticalalignment='top')   
+ax.text(0.0000, 1.05, 'Serious Injuries (> 15 gms)', transform=ax.transAxes, fontsize=20, verticalalignment='top')   
 
 plt.axis('off')
 plt.show()
