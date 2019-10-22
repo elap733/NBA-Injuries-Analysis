@@ -36,6 +36,8 @@ The objective of this project was to determine if serious injuries **_are_** rea
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg"> 
 *Fig.2: Screenshot of search results from Prosports Transactions*
 
+![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/word_cloud.png)
+*Fig.3: Word cloud of injury transaction "notes". [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
    
 2. **NBA Schedule Data**
