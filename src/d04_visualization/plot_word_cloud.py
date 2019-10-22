@@ -12,13 +12,13 @@ Outputs:
     
 @author: evanl
 """
-
-import pandas as pd
-import pickle
-import matplotlib.pyplot as plt
-import seaborn as sns
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from PIL import Image
+import requests
 import numpy as np
-import numpy.random as nr
+import matplotlib.pyplot as plt
+import pickle
+import pandas as pd
 
 pd.set_option('display.expand_frame_repr', False)
 
@@ -27,7 +27,7 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/missed_games_all_durations.png'
+plot_savepath =  '../../results/01_plots/word_cloud.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -48,36 +48,27 @@ injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','s
 
 
 #------------------------Make plots-------------------------------------------
+note_keywords = injury_df['Notes'][(injury_df['note_keyword'] != 'returned to lineup')]
+words = note_keywords.str.cat(sep = ',')
 
-#group by year, category, and sum total missed games. Unstack to plot
-data = injury_df.groupby(['Year','category'])['Tot_games_missed'].sum().unstack()
+#-------------------------Format---------------------------------------------
 
-#reorder injury categories
-data =data [['knee', 'lower leg', 'upper leg', 'torso', 'foot','head', 'hand', 'arm','leg']]
+# This function takes in your text and your mask and generates a wordcloud. 
 
-#create plot
-ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
+stopwords = set(STOPWORDS)
+stopwords.add('DTD')
+stopwords.add('DNP')
+stopwords.add('placed')
+stopwords.add('left')
+stopwords.add('right')
+stopwords.add('IL')
 
-# Set the x-axis label
-ax.set_xlabel("Year", fontsize = 16, weight='bold')
-
-# Set the y-axis label
-ax.set_ylabel("Games Missed Due to Injury", fontsize =16,weight='bold')
-
-# Set the x-axis tick labels
-ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
-
-# Set the y-axis tick labels
-y_tick_labels = []
-for tick in ax.get_yticks():
-    y_tick_labels.append(int(tick))
-    
-ax.set_yticklabels(y_tick_labels, fontsize = 16)
-
-# Set legend properties
-ax.legend(list(data.columns), fontsize = 16)
-ax.legend(loc='best')
+word_cloud = WordCloud(width = 512, height = 512, background_color='black', stopwords=stopwords, collocations = False, colormap = 'Blues').generate(words)
+plt.figure(figsize=(10,8),facecolor = 'white', edgecolor='blue')
+plt.imshow(word_cloud)
+plt.axis('off')
+plt.tight_layout(pad=0)
+plt.show()
 
 #----------------------Save plot---------------------------------------------
-fig = ax.get_figure()
-fig.savefig(plot_savepath, dpi = 300)
+word_cloud.to_file(plot_savepath)
