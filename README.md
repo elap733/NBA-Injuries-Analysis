@@ -53,7 +53,10 @@ The objective of this project was to determine if serious injuries **_are_** rea
 This project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends, it is however the first (I believe) to **tie both NBA schedule data and player stats/bio to transactions. The merging of injury transactions and schedule data, is not a simple effort, but by doing this it allows me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occured**. The latter is actually a very poor metric for tracking injuries because it treats all injuries as equal (eg. a sore hamstring != a torn achilles)). Consider the plots below:
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_events.png)
-*Fig.3: Count of injury events (transactions) each season 2010-2018. Excluded missed games due to personal reasons, rest, sickness. Players averaging 10 minutes per game.*
+*Fig.3: Count of **injury events (transactions)** each season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
+
+![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries.png)
+*Fig.3: Count of **missed games** each season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
 After identifying the number of games missed due to each injury, one can identify separate serious injuries from minor.
 
