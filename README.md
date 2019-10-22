@@ -72,6 +72,7 @@ In addition to incorporating schedule data, this analysis also merges injury tra
 *Fig.6: Count of **missed games due to serious injuries** each season, broken down by **affected body region**. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_all_injuries2018.png" width="400"/><img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_serious_injuries2018.png" width="400"/>
+
 *Fig.7: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games. Left: All injury durations;Right: Serious injuries only. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
 #### Team Trends 
