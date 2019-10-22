@@ -4,8 +4,6 @@ This script creates a stacked bar chart of missed games due to injury. Each
 bar represents a year, each stack with in the corrresponds to an injury "category"
 or "keyword".
 
-***This script plots serious injuries (>15 games missed)***
-
 Required inputs:
     -mg_il_ps_merged_df.p
     
@@ -26,7 +24,7 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/stacked_bar_missed_games_serious_injuries.png'
+plot_savepath =  '../../results/01_plots/stacked_bar_missed_games_all_injuries.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -45,8 +43,6 @@ injury_df = injury_df[injury_df['MPPG'] > 10.0]
 #Exclude those 'injuries' which are not relevant (healthy scratches, rest, sick, n/a, other)
 injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
 
-#Only look at serious injuries
-injury_df = injury_df[injury_df['Tot_games_missed'] > 15.0]
 
 #------------------------Make plots-------------------------------------------
 

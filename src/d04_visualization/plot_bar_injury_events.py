@@ -14,10 +14,7 @@ Outputs:
 
 import pandas as pd
 import pickle
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-import numpy.random as nr
+
 
 pd.set_option('display.expand_frame_repr', False)
 
@@ -67,9 +64,9 @@ for tick in ax.get_yticks():
     
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
-# Set legend properties
-ax.legend(list(data.columns), fontsize = 16)
-ax.legend(loc='best')
+## Set legend properties
+#ax.legend(list(data.columns), fontsize = 16)
+#ax.legend(loc='best')
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()

@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a stacked bar chart of missed games due to injury. Each 
-bar represents a year, each stack with in the corrresponds to an injury "category"
-or "keyword".
-
-***This script plots serious injuries (>15 games missed)***
+This script creates a bar chart of missed games due to injury. Each 
+bar represents a year.
 
 Required inputs:
     -mg_il_ps_merged_df.p
@@ -18,7 +15,6 @@ Outputs:
 import pandas as pd
 import pickle
 
-
 pd.set_option('display.expand_frame_repr', False)
 
 #--------------------------User Inputs---------- ----------------------
@@ -26,7 +22,7 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/stacked_bar_missed_games_serious_injuries.png'
+plot_savepath =  '../../results/01_plots/bar_missed_games_all_injuries.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -45,16 +41,11 @@ injury_df = injury_df[injury_df['MPPG'] > 10.0]
 #Exclude those 'injuries' which are not relevant (healthy scratches, rest, sick, n/a, other)
 injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
 
-#Only look at serious injuries
-injury_df = injury_df[injury_df['Tot_games_missed'] > 15.0]
 
 #------------------------Make plots-------------------------------------------
 
 #group by year, category, and sum total missed games. Unstack to plot
-data = injury_df.groupby(['Year','category'])['Tot_games_missed'].sum().unstack()
-
-#reorder injury categories
-data =data [['knee', 'lower leg', 'upper leg', 'torso', 'foot','head', 'hand', 'arm','leg']]
+data = injury_df.groupby(['Year'])['Tot_games_missed'].sum()
 
 #create plot
 ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
@@ -75,9 +66,9 @@ for tick in ax.get_yticks():
     
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
-# Set legend properties
-ax.legend(list(data.columns), fontsize = 16)
-ax.legend(loc='best')
+## Set legend properties
+#ax.legend(list(data.columns), fontsize = 16)
+#ax.legend(loc='best')
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()
