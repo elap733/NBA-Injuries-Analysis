@@ -50,4 +50,4 @@ ax.set_title("Injury Events", fontsize = 20, weight = 'bold')
 plt.show()
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()
-fig.savefig(plot_savepath, dpi = 300)
+fig.savefig(plot_savepath, dpi = 300, bbox_extra_artists=(), bbox_inches='tight')
