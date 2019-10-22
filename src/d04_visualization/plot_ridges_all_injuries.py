@@ -40,7 +40,7 @@ injury_df = injury_df[injury_df['Tot_games_missed'] > 0]
 injury_df = injury_df[injury_df['Season'].isin(['regular','post'])]
 injury_df = injury_df[['Year','Game_number']]
 
-fig, axes = joypy.joyplot(injury_df, by='Year', column='Game_number',hist = 'True', bins =25, overlap = 0, figsize=(5,8))
+fig, axes = joypy.joyplot(injury_df, by='Year', column='Game_number',hist = 'True', bins =25, overlap = 0.3, figsize=(5,5))
 
 #Set axis labels
 ax = axes[-1]
