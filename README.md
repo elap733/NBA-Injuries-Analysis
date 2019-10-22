@@ -58,9 +58,9 @@ This project is not the first to use [Prosport Transactions](http://prosportstra
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries.png)
 *Fig.3: Count of **missed games** each season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
-After identifying the number of games missed due to each injury, one can identify separate serious injuries from minor.
+**Looking only at Figure: 1 (injury events (transactions)) one might come to the conclusion that the NBA's injury posture is much better today (2017-2018) than it was in the past (2010-2012). If we actually look at the number of games missed (Figure 2) we  see the _opposite_ story is true.** Furthmore, by identifying the number of games missed due to each injury, we can also separate serious injuries from minor.
 
-Additionally, the merging of transactions with player stats/bio data allows to one look at injury trends as they relate to player age and usage.
+In addition to incorporating schedule data, this analysis also merges injury transactions with player stats/bio data allowing to one look at how injuries correlate with player age and usage.
 
 ### Results 
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/serious_injury_body_map_2018.png"  width="400" height="400">
