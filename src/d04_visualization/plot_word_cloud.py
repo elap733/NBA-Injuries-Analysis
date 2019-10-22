@@ -44,7 +44,7 @@ injury_df['Tot_games_missed'] = injury_df['Reg_games_missed'] + injury_df['Post_
 injury_df = injury_df[injury_df['MPPG'] > 10.0]
 
 #Exclude those 'injuries' which are not relevant (healthy scratches, rest, sick, n/a, other)
-injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
+#injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
 
 
 #------------------------Make plots-------------------------------------------
