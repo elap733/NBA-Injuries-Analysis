@@ -101,16 +101,17 @@ If we limit our analysis to serious injuries (Figure 9 and Figure 10 below), we 
    *Fig.10: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games.[Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 </p>
 ### Suprising Observations
-####Rest Days
+
+**Rest Days**
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_rest.png)
 
 *Fig.12: Missed games where 'rest' is cited as the reason. [Note:Included only players averaging 10 minutes per game].*
 
-####Temporal Dependence of Injury Events
+**Temporal Dependence of Injury Events**
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/ridge_plot_all_injuries.png" width="400"/>
 *Fig.13: Count of injury events over the course of an 81+ game season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
-#### Correlations To Player Usage and Age
+**Correlations To Player Usage and Age**
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/correlation_plots.png)
 *Fig.14: Correlatin plot of player age, cummulative minutes player over prior seasons, and missed games due to injury. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
