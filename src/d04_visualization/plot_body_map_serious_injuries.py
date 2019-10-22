@@ -225,7 +225,7 @@ ax.text(0.60, 0.77, ('{}/{} Season '.format(year, (year+1))), transform=ax.trans
 ax.text(0.685, 0.73, 'Missed Games', transform=ax.transAxes, fontsize=18, weight ='bold', verticalalignment='top')    
 
 # text box two
-ax.text(0.0000, 1.05, 'Serious Injuries (> 15 gms)', transform=ax.transAxes, fontsize=20, verticalalignment='top')   
+ax.text(0.0000, 0.99, 'Only Serious Injuries', transform=ax.transAxes, fontsize=20, verticalalignment='top')   
 
 plt.axis('off')
 plt.show()
