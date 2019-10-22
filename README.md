@@ -66,12 +66,13 @@ This project is not the first to use [Prosport Transactions](http://prosportstra
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries.png)
 *Fig.5: Count of **missed games** each season. [Note: I filtered injury events to explicitly exclude "non-injury" events  like missed games due to personal reasons, rest, sickness; I also filtered injury events to only include players averaging more than 10 minutes per game].*
 
-**Looking only at Figure: 41 (injury events (transactions)) one might come to the conclusion that the NBA's injury posture is much better today (2017-2018) than it was in the past (2010-2012). If we actually look at the number of games missed (Figure 5) we  see the _opposite_ story is true.** Furthmore, by identifying the number of games missed due to each injury, we can also separate serious injuries from minor.
+**Looking only at Figure: 4 (injury events (transactions)) one might come to the conclusion that the NBA's injury posture is much better today (2017-2018) than it was in the past (2010-2013). If instead we look at the number of games missed (Figure 5), we  see the _opposite_ story is true, and missed games totals are actually increasing.** 
+
+Furthmore, by identifying the number of games missed due to each injury, we can also separate serious injuries from minor. In Figure 6, I plot the count of serious injury events overtime (like Figure 4 except only events that resulted in players missing more than 15 games). Here we also see an increasing trend in recent years.
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_serious_events.png)
 *Fig.6: Count of **serious injury events (transactions)** each season. A serious injury is defined as one that causes a place to miss more than 15 games. [Note: I filtered injury events to explicitly exclude "non-injury" events  like missed games due to personal reasons, rest, sickness; I also filtered injury events to only include players averaging more than 10 minutes per game].*
 
-In addition to incorporating schedule data, this analysis also merges injury transactions with player stats/bio data allowing to one look at how injuries correlate with player age and usage.
 
 ## Results 
 ### Injury Trends
