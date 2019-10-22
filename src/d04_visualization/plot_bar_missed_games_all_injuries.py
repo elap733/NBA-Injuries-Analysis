@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a bar chart of missed games due to injury. Each 
+This script creates a bar chart of games missed due to rest. Each 
 bar represents a year.
 
 Required inputs:
@@ -22,7 +22,7 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/bar_missed_games_all_injuries.png'
+plot_savepath =  '../../results/01_plots/bar_missed_games_rest.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -38,8 +38,8 @@ injury_df['Tot_games_missed'] = injury_df['Reg_games_missed'] + injury_df['Post_
 #Only look at players that averaged more than 10 minutes per game ('MPPG' > 10)
 injury_df = injury_df[injury_df['MPPG'] > 10.0]
 
-#Exclude those 'injuries' which are not relevant (healthy scratches, rest, sick, n/a, other)
-injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
+#Just look at rest events
+injury_df = injury_df[injury_df['category'].isin(['rest'])]
 
 
 #------------------------Make plots-------------------------------------------
@@ -54,7 +54,7 @@ ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Games Missed Due to Injury", fontsize =16,weight='bold')
+ax.set_ylabel("Games Missed Due to Rest", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
