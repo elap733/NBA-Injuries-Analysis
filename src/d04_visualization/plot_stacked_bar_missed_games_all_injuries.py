@@ -72,9 +72,7 @@ for tick in ax.get_yticks():
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
 # Set legend properties
-ax.legend(list(data.columns), fontsize = 16)
-ax.legend(loc='best')
-
+lgd = ax.legend(loc='center left', bbox_to_anchor=(1.0, 0.6), fontsize =18)
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()
-fig.savefig(plot_savepath, dpi = 300)
+fig.savefig(plot_savepath, dpi = 300, bbox_extra_artists=(lgd,), bbox_inches='tight')
