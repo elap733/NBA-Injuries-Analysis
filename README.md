@@ -23,7 +23,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
    NBA injury data was scraped from the website [Prosports Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports "transactions", including "the most complete database of pro basketball transactions available". For the purposes of this analysis two complementary "transaction" types were particularily useful: 
    * **"Missed games due to injury/personal reasons"**
-      * This transaction type occurs when a player misses game while on their team's Active List (each team is only allowed to keep 11 players on its active list). These missed game events are typically short duration (1-3 games) 
+      * This transaction type occurs when a player misses a game while on their team's active list. These missed game events are typically short duration (1-3 games) 
    * **"Movement to/from injured/inactive list (IL)"**
       * This transaction type occurs when a player is placed on the Inactive List. Serious injuries typically result in a player being placed on their team's Inactive List; this allows another player to assume their spot on the Active List.
    
