@@ -34,11 +34,14 @@ The objective of this project was to determine if serious injuries **_are_** rea
    *  'Relinquished' - The name of the player missing a game or placed on the IL.
    *  'Notes' - A description of the event and injury (sometimes).
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/prosports_transactions_sheetshot.jpg"> 
+
 *Fig.2: Screenshot of search results from Prosports Transactions*
 
+
 <p align="center">
-   <isrc="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/word_cloud.png">
-*Fig.3: Word cloud of injury transaction "notes".*
+   <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/word_cloud.png">
+   
+   *Fig.3: Word cloud of injury transaction "notes"*
 </p>
    
 2. **NBA Schedule Data**
