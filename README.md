@@ -5,10 +5,10 @@ This README provides an overview of the NBA-Injury-Analyses project contained wi
 * [Motivation](#motivation)
 * [Objective](#objective)
 * [Data Sources](#data-sources)
-* [What Makes This NBA Injury Analysis Unique?](#what-makes-this-nba-injury-analysis-unique?)
+* [What Makes This NBA Injury Analysis Unique](#what-makes-this-nba-injury-analysis-unique)
 * [Results](#results)
 * [Conclusion](#conclusion)
-* [Repositiory Code Description](#repository_code_description)
+* [Repositiory Structure](#repository_structure)
 ## Motivation	
 The outcome of the 2018/2019 NBA season was largely shaped by a rash of devasting injuries to star players (Kevin Durant, Klay Thompson, DeMarcus Cousins, and Victor Oladipo to name a few). In recent years there **_seems_** to have been an increasing number of high profile players experiencing serious injuries (ACL tears, achilles ruptures, lower leg fractures), in turn causing them to miss significant playing time, often to the detriment of their team's success.
 
@@ -119,6 +119,7 @@ Players may miss games or move temporarily to the inactive list simply for rest.
 Intuitively I expected there to be more injuries later in the season as players wear down, figure 13 however suggests that the rate of injury is actually fairly constant over the course of the season.
 
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/ridge_plot_all_injuries.png" width="400"/>
+
 *Fig.13: Count of injury events over the course of an 81+ game season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game]*
 
 **Correlations To Player Usage and Age**
@@ -126,13 +127,14 @@ Intuitively I expected there to be more injuries later in the season as players 
 Finally, I expected to see some positive correlation betweeen player age or player usage (total minutes played in prior seasons) with missed games. The correlation matrix below suggests that this is not actually the case.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/correlation_plots.png)
+
 *Fig.14: Correlatin plot of player age, cummulative minutes player over prior seasons, and missed games due to injury. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game]*
 
 ## Conclusions
 
 This exploratory data analysis of NBA injuries revealed that serious injuries may in fact be on the rise. Additional analysis is needed to better understand the factors driving this change, and to investigate the surprising observations described in the section above.
 
-## Repository Code Description
+## Repository Structure
 
 ### Work Flow
 The figure below shows the workflow of scraping, cleaning, and processing that I executed prior to creating visualizations.
@@ -140,7 +142,6 @@ The figure below shows the workflow of scraping, cleaning, and processing that I
 
 ### Folder Structure
 All scripts and data files can be found the appropriate directory below.
-<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/folder_structure.png" width="300"/>
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/folder_structure.png)
 
-## Sources
-To run this project, install it locally using npm:
+
