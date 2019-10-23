@@ -16,18 +16,18 @@ The outcome of the 2018/2019 NBA season was largely shaped by a rash of devastin
 *Fig.1: (L) Kevin Durant's achilles tear; (R) Klay Thompson's torn MCL in the 2018/2019 NBA Finals*
 
 ## Objective
-The objective of this project was to determine if serious injuries **_are_** really on this rise in the NBA, and in doing so, explore the nature of NBA injuries during the past decade. For the purposes of this analysis, I nominally define "serious injuries" as those causing a player to miss 15 or more games.
+The objective of this project was to determine if serious injuries **_are_** really on the rise in the NBA, and in doing so, explore the nature of NBA injuries during the past decade. For the purposes of this analysis, I nominally define "serious injuries" as those causing a player to miss 15 or more games.
 
 ## Data Sources
 1. **NBA Injury Data**
 
-   I scraped NBA injury data from the website [Prosports Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports "transactions", including "the most complete database of pro basketball transactions available". For the purposes of this analysis, two complementary "transaction" types were particularily useful: 
+   I scraped NBA injury data from the website [Prosports Transactions](http://prosportstransactions.com/). This site maintains an open-source archive of sports "transactions", including "the most complete database of pro basketball transactions available". For the purposes of this analysis, two complementary "transaction" types were particularly useful: 
    * **"Missed games due to injury/personal reasons"**
-      * This transaction (event) occurs when a player - who is currently on their team's active roster - misses a scheduled game. These missed game events are typically short duration (1-3 games) 
+      * This transaction (event) occurs when a player - who is currently on their team's active roster - misses a scheduled game. These missed game events are typically short duration (1-3 games). 
    * **"Movement to/from injured/inactive list (IL)"**
       * This transaction (event) occurs when a team places a player on their inactive roster. Teams typically move a player to the inactive roster if the player is expected to be out for an extended period of time. This allows another (healthy) player to assume the injured player's spot on the active roster.
    
-   An "transaction" event in this database provides the following information (see screenshot below):
+   A "transaction" event in this database provides the following information (see screenshot below):
    *  'Date' - Date of missed game/ movement to IL 
    *  'Team' - The player's team
    *  'Acquired' - The name of the player returning to lineup
@@ -58,7 +58,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
 ## What makes _this_ NBA injury analysis unique?
 
-This project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends, it is however the first (I believe) to **tie both NBA schedule data and player stats/bio to transactions. The merging of injury transactions and schedule data allowed me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occurred**. The latter is a rather naive metric for tracking injuries because it treats all injuries as equal (eg. a sore hamstring != a torn achilles)). Consider the plots below:
+This project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends. It is however the first (I believe) to **tie both NBA schedule data and player stats/bio to transactions. The merging of injury transactions and schedule data allowed me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occurred**. The latter is a rather naive metric for tracking injuries because it treats all injuries as equal (eg. a sore hamstring != a torn achilles)). Consider the plots below:
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_events.png)
 *Fig.4: Count of **injury events (transactions)** each season. [Note: I filtered injury events to explicitly exclude "non-injury" events  like missed games due to personal reasons, rest, sickness; I also filtered injury events to only include players averaging more than 10 minutes per game].*
