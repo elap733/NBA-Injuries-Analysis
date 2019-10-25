@@ -34,7 +34,7 @@ injury_df = injury_df[injury_df['MPPG'] > 10.0]
 injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
 
 #Only look at serious injuries
-injury_df = injury_df[injury_df['Tot_games_missed'] > 0]
+injury_df = injury_df[injury_df['Tot_games_missed'] > 10]
 
 #--------------------------Plot------------------------------------------------
 injury_df = injury_df[injury_df['Season'].isin(['regular','post'])]

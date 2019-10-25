@@ -1,22 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a bar chart of the injury events (or "transactions") each 
-season. Each bar represents a year.
-
-***This script plots serious injuries (>15 games missed)***
+This script creates a bar chart of games missed due to rest. Each 
+bar represents a year.
 
 Required inputs:
     -mg_il_ps_merged_df.p
     
 Outputs:
-    - bar chart
+    -stacked bar chart
     
 @author: evanl
 """
 
 import pandas as pd
 import pickle
-
 
 pd.set_option('display.expand_frame_repr', False)
 
@@ -25,7 +22,7 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/bar_plot_injury_serious_events.png'
+plot_savepath =  '../../results/01_plots/bar_missed_games_rest.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -41,25 +38,26 @@ injury_df['Tot_games_missed'] = injury_df['Reg_games_missed'] + injury_df['Post_
 #Only look at players that averaged more than 10 minutes per game ('MPPG' > 10)
 injury_df = injury_df[injury_df['MPPG'] > 10.0]
 
-#Exclude those 'injuries' which are not relevant (healthy scratches, rest, sick, n/a, other)
-injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
+#Just look at rest events
+injury_df = injury_df[injury_df['category'].isin(['rest'])]
 
-#Only look at serious injuries
-injury_df = injury_df[injury_df['Tot_games_missed'] > 15.0]
 
 #------------------------Make plots-------------------------------------------
 
 #group by year, category, and sum total missed games. Unstack to plot
-data = injury_df.groupby(['Year']).size()
+data = injury_df.groupby(['Year'])['Tot_games_missed'].sum()
+
+#there are no "rest" notes for 2018. Add an entry for 2018 for plotting purposes.
+data[2018] = 0
 
 #create plot
-ax = data.plot(kind='bar', stacked=True, figsize=(15, 10), color = ['dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'red'])
+ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
 
 # Set the x-axis label
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Number of Serious Injury Events", fontsize =16,weight='bold')
+ax.set_ylabel("Games Missed for Rest", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
