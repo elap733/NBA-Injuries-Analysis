@@ -26,7 +26,7 @@ injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 year = 2018
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/hor_bar_all_injuries{}.png'.format(year)
+plot_savepath =  '../../results/01_plots/hor_bar_serious_injuries{}.png'.format(year)
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -43,7 +43,7 @@ injury_df['Tot_games_missed'] = injury_df['Reg_games_missed'] + injury_df['Post_
 injury_df = injury_df[injury_df['MPPG'] > 10.0]
 
 #Only look at serious injuries
-injury_df = injury_df[injury_df['Tot_games_missed'] > 0]
+injury_df = injury_df[injury_df['Tot_games_missed'] > 15]
 
 #Exclude those 'injuries' which are not relevant (healthy scratches, rest, sick, n/a, other)
 injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','sick','other','n/a'])]
