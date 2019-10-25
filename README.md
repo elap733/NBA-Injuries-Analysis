@@ -64,7 +64,7 @@ This project is not the first to use [Prosport Transactions](http://prosportstra
 *Fig.4: Count of **injury events (transactions)** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
 
 
-Figure: 4, a count of injury events each season, gives the impression that the NBA's injury posture is better today (2017-2018) than it was in the recent past (2010-2013). Missed games (Figure 5) however tell a very different story, as 2017 and 2018 standout as having the highest missed games total in the past 9 seasons.
+Figure: 4, a count of injury events each season, gives the impression that the NBA's injury posture is better today (the 2017 and 2018 seasons) than it was in the recent past (2010-2013). Figure 5, a count of missed games each season due to injury, however presents a very different story, as the 2017 and 2018 seasons appear to have the highest missed games totals in the past 9 seasons.
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries.png)
 *Fig.5: Count of **missed games** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
@@ -74,7 +74,7 @@ From a team/player/fan's perspective its not the number of injury events that re
 ## Results 
 ### Injury Trends
 
-Figures 6  provides evidence that the last two seasons have experienced an increase in the number of games missed due to injuries and serious injury events (duration > 15 games) relative to the prior 7 seasons. 
+Figures 6  provides evidence that the last two seasons have experienced an increase in the number of games missed due to injuries relative to the prior 7 seasons. 
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries_c2018.png)
 *Fig.6: Count of **missed games** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
@@ -84,7 +84,9 @@ Likewise, Figures 7  provides evidence that the last two seasons have experience
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_serious_injuries_c2018.png)
 *Fig.7: Count of **missed games due to serious injuries** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
 
-We can examine the nature of these injuries in more detail by analyzing the text provided in the transaction "note". Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games.
+This appears to answer my original question, but these plots do not provide information to understand why this trend is occuring. It could simply be the manifestation of the randonmess of injuries, or it could a real trend that NBA should be worried about.
+
+and if this trend is something the NBA should be worried  further investigation is necessary to explain thisw trend and to understand if the We can examine the nature of these injuries in more detail by analyzing the text provided in the transaction "note". Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_all_injuries.png)
 *Fig.7: Count of **missed games (all injury durations)** each season, broken down by **affected body region**. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
