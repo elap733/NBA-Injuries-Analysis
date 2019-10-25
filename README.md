@@ -63,16 +63,10 @@ This project is not the first to use [Prosport Transactions](http://prosportstra
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_events.png)
 *Fig.4: Count of **injury events (transactions)** each season. [Note: I filtered injury events to explicitly exclude "non-injury" events  like missed games due to personal reasons, rest, sickness; I also filtered injury events to only include players averaging more than 10 minutes per game].*
 
+**Figure: 4, a count of injury events each season, gives the impression that the NBA's injury posture is better today (2017-2018) than it was in the recent past (2010-2013). Missed games (Figure 5) however tell a very different story, as 2017 and 2018 standout as the having the highest missed games total in the past 9 seasons. From a team/player/fan's perspective its not the number of injury events that matters, its the number of games missed. 
+
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries.png)
 *Fig.5: Count of **missed games** each season. [Note: I filtered injury events to explicitly exclude "non-injury" events  like missed games due to personal reasons, rest, sickness; I also filtered injury events to only include players averaging more than 10 minutes per game].*
-
-**Looking only at Figure: 4 (injury events (transactions)) one might come to the conclusion that the NBA's injury posture is much better today (2017-2018) than it was in the past (2010-2013). If instead we look at the number of games missed (Figure 5), we see the _opposite_ story is true, and missed games totals are actually increasing.** 
-
-Furthermore, by identifying the number of games missed due to each injury, we can also separate serious injuries from minor ones. In Figure 6, I plot the count of serious injury events over time (like Figure 4 except only events that resulted in players missing more than 15 games). Here we also see an increasing trend in recent years.
-
-![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_serious_events.png)
-*Fig.6: Count of **serious injury events (transactions)** each season. A serious injury is defined as one that causes a place to miss more than 15 games. [Note: I filtered injury events to explicitly exclude "non-injury" events  like missed games due to personal reasons, rest, sickness; I also filtered injury events to only include players averaging more than 10 minutes per game].*
-
 
 ## Results 
 ### Injury Trends
