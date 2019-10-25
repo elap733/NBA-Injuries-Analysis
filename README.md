@@ -63,7 +63,8 @@ This project is not the first to use [Prosport Transactions](http://prosportstra
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_events.png)
 *Fig.4: Count of **injury events (transactions)** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
 
-**Figure: 4, a count of injury events each season, gives the impression that the NBA's injury posture is better today (2017-2018) than it was in the recent past (2010-2013). Missed games (Figure 5) however tell a very different story, as 2017 and 2018 standout as the having the highest missed games total in the past 9 seasons.**
+
+Figure: 4, a count of injury events each season, gives the impression that the NBA's injury posture is better today (2017-2018) than it was in the recent past (2010-2013). Missed games (Figure 5) however tell a very different story, as 2017 and 2018 standout as having the highest missed games total in the past 9 seasons.
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries.png)
 *Fig.5: Count of **missed games** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
