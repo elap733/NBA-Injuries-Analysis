@@ -103,14 +103,13 @@ We can look at this in finer granuality by breaking down body regions in to body
 
 
 If we limit our analysis to serious injuries (Figure 9 and Figure 10 below), we see that knee and ankle injuries are the top serious injuries.
+
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_serious_injuries.png)
 *Fig.9: Count of **missed games due to serious injuries** each season, broken down by **affected body region**. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
-<p align="center">
-   <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_serious_injuries2018.png" width="400"/>
-   
-   *Fig.10: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games.[Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
-</p>
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/hor_bar_serious_injuries2018.png" width="400"/><img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_serious_injuries2018.png" width="400"/> 
+*Fig.10: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games.[Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
+
 
 ### Suprising Observations and Trends
 
