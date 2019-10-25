@@ -54,7 +54,7 @@ injury_df = injury_df[injury_df['Tot_games_missed'] >= 15]
 
 injury_df = injury_df[injury_df['Year'] != 2009]
 
-grouped_df = injury_df.groupby(['Year','Month'])['Team'].count().unstack()
+grouped_df = injury_df.groupby(['Year','Month'])['Tot_games_missed'].sum().unstack()
 
 grouped_df = grouped_df.fillna(0)
 
@@ -64,7 +64,7 @@ grouped_df = grouped_df[['October','November', 'December', 'January', 'February'
 
 fig = plt.figure(figsize=(12,12))
 r = sns.heatmap(grouped_df, cmap='Reds')
-r.set_title("Heatmap of Serious Injuries 2010-2018")
+r.set_title("Heatmap of Games Missed 2010-2018")
 
 
 
