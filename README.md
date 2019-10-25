@@ -73,6 +73,7 @@ From a team/player/fan's perspective its not the number of injury events that re
 
 ## Results 
 ### Injury Trends
+#### Missed Games
 
 Figures 6  provides evidence that the last two seasons have experienced an increase in the number of games missed due to injuries relative to the prior 7 seasons. 
 
@@ -84,7 +85,7 @@ Likewise, Figures 7  provides evidence that the last two seasons have experience
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_serious_injuries_c2018.png)
 *Fig.7: Count of **missed games due to serious injuries** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
 
-This appears to answer my original question, but these plots do not provide information to understand why this trend is occuring. It could simply be the manifestation of the randonmess of injuries, or it could a real trend that NBA should be worried about.
+While these plots suggest my original hypothesis was valid, further data exploration is necessary to  understand why this trend is occuring. It may simply be due to the randonmess of injuries, or it could a real trend that NBA should be worried about.
 
 and if this trend is something the NBA should be worried  further investigation is necessary to explain thisw trend and to understand if the We can examine the nature of these injuries in more detail by analyzing the text provided in the transaction "note". Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games.
 
