@@ -50,6 +50,7 @@ injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','s
 
 injury_df = injury_df[injury_df['Year'] == 2018]
 
+#dictionary to reduce number of body parts to plot
 injury_dictionary = {
         'foot': 'foot',
         'toe': 'toe',
@@ -90,7 +91,7 @@ injury_dictionary = {
 injury_df['note_keyword'] = injury_df['note_keyword'].map(injury_dictionary )
 
 #------------------------Make plots-------------------------------------------
-
+#groupby note keyword and sum total games missed
 dataset = injury_df.groupby(['note_keyword'])['Tot_games_missed'].sum()
 
 #fill those 'note_keyword' that are NaN with zeros
@@ -123,16 +124,16 @@ injury_color_dict = {
         }
 
 dataset = dataset.sort_values(ascending = True)
+
+#map colors
 colors = []
 for n in dataset.index:
     colors.append(injury_color_dict[n])
-    
-#dataset = dataset.to_frame
-#dataset = dataset.transpose()
+
 
 #create plot
 
-ax = dataset.plot(kind = 'barh', color = colors, fig = (4,4))
+ax = dataset.plot(kind = 'barh', color = colors, fig = (6,4))
 
 # Set the x-axis label
 ax.set_xlabel("Count of Games Missed", fontsize = 16, weight='bold')
@@ -140,15 +141,6 @@ ax.set_xlabel("Count of Games Missed", fontsize = 16, weight='bold')
 # Set the y-axis label
 ax.set_ylabel("Injured Body Part", fontsize =16,weight='bold')
 
-# Set the x-axis tick labels
-#ax.set_xticklabels(ax.get_yticks(),rotation = 0, fontsize = 16)
-
-## Set the y-axis tick labels
-#y_tick_labels = []
-#for tick in ax.get_yticks():
-#    y_tick_labels.append(int(tick))
-#    
-#ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()

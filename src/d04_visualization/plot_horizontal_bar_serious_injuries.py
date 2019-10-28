@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a horizontal bar chart of missed games due to injury. Each 
+This script creates a horizontal bar chart of missed games due to serious injury. Each 
 bar represents an injured body part.
+
+serious injury = an injury that causes a player to miss 15 or more games
 
 Required inputs:
     -mg_il_ps_merged_df.p
@@ -50,6 +52,7 @@ injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','s
 
 injury_df = injury_df[injury_df['Year'] == 2018]
 
+#dictionary to simplify plot (plot fewer body parts by combining some - e.g. eye, nose = face)
 injury_dictionary = {
         'foot': 'foot',
         'toe': 'toe',
@@ -124,15 +127,13 @@ injury_color_dict = {
 
 dataset = dataset.sort_values(ascending = True)
 colors = []
+
+#map colors
 for n in dataset.index:
     colors.append(injury_color_dict[n])
     
-#dataset = dataset.to_frame
-#dataset = dataset.transpose()
-
 #create plot
-
-ax = dataset.plot(kind = 'barh', color = colors, fig = (4,4))
+ax = dataset.plot(kind = 'barh', color = colors, fig = (6,4))
 
 # Set the x-axis label
 ax.set_xlabel("Count of Games Missed", fontsize = 16, weight='bold')
@@ -140,15 +141,6 @@ ax.set_xlabel("Count of Games Missed", fontsize = 16, weight='bold')
 # Set the y-axis label
 ax.set_ylabel("Injured Body Part", fontsize =16,weight='bold')
 
-# Set the x-axis tick labels
-#ax.set_xticklabels(ax.get_yticks(),rotation = 0, fontsize = 16)
-
-## Set the y-axis tick labels
-#y_tick_labels = []
-#for tick in ax.get_yticks():
-#    y_tick_labels.append(int(tick))
-#    
-#ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()

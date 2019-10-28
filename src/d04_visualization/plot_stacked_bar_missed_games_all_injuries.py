@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 This script creates a stacked bar chart of missed games due to injury. Each 
-bar represents a year, each stack with in the corrresponds to an injury "category"
-or "keyword".
+bar represents a year, each stack with in the corrresponds to a body region.
+
+Excludes players with less than 10 minutes played per game per season.
 
 Required inputs:
     -mg_il_ps_merged_df.p

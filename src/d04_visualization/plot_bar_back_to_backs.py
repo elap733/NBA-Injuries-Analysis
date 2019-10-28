@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a bar chart of the number of back to back games each season.
+This script creates a bar chart displaying the number of back-to-back sets
+played each season. A "back-to-back" set is defined as two games played on
+consecutive calendar days.
 
 Required inputs:
-    -mg_il_ps_merged_df.p
+    -all_teams_schedule_2010_2020_processed.p
     
 Outputs:
-    -stacked bar chart
+    -bar chart
     
 @author: evanl
 """
@@ -30,29 +32,28 @@ schedule_df = pickle.load(open(schedule_df_filepath, "rb" ) )
 #-------------------------Process Dataframe----------------------------------
 
 #calculate the number of calendar days between each game
-
 schedule_df['date_diff']=schedule_df['Date'].diff() / np.timedelta64(1, 'D')
 back_to_backs_df = schedule_df[schedule_df['date_diff'] == 1]
 
 #restrict to years 2010-2018
-back_to_backs_df = back_to_backs_df[back_to_backs_df['Year'] != 2009]
+back_to_backs_df = back_to_backs_df[~back_to_backs_df['Year'].isin([2009,2019])]
 
-#restrict to regular season
+#restrict to regular season games
 back_to_backs_df = back_to_backs_df[back_to_backs_df['Season'] == 'regular']
 #------------------------Make plots-------------------------------------------
 
-#group by year, category, and sum total missed games. Unstack to plot
+#group by year and count the number of back-to-backs
 data = back_to_backs_df.groupby(['Year']).count()
 
 
 #create plot
-ax = data['Date'].plot(kind='bar',  figsize=(15, 10))
+ax = data['Date'].plot(kind='bar',  figsize=(15, 10), color = ['dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'red'])
 
 # Set the x-axis label
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Back-to-Backs", fontsize =16,weight='bold')
+ax.set_ylabel("Number of Back-to-Backs", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
@@ -64,9 +65,6 @@ for tick in ax.get_yticks():
     
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
-## Set legend properties
-#ax.legend(list(data.columns), fontsize = 16)
-#ax.legend(loc='best')
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()

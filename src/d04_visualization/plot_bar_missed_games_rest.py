@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a bar chart of games missed due to rest. Each 
+This script creates a bar chart of games missed for rest. Each 
 bar represents a year.
 
 Required inputs:
@@ -41,17 +41,16 @@ injury_df = injury_df[injury_df['MPPG'] > 10.0]
 #Just look at rest events
 injury_df = injury_df[injury_df['category'].isin(['rest'])]
 
-
 #------------------------Make plots-------------------------------------------
 
-#group by year, category, and sum total missed games. Unstack to plot
+#group by year and sum total missed games. 
 data = injury_df.groupby(['Year'])['Tot_games_missed'].sum()
 
-#there are no "rest" notes for 2018. Add an entry for 2018 for plotting purposes.
+#there are no "rest" notes for 2018. Manually add an entry for 2018 for plotting clarity.
 data[2018] = 0
 
 #create plot
-ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
+ax = data.plot(kind='bar', stacked=True, figsize=(15, 10), color = ['dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'red'])
 
 # Set the x-axis label
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
@@ -69,9 +68,6 @@ for tick in ax.get_yticks():
     
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
-## Set legend properties
-#ax.legend(list(data.columns), fontsize = 16)
-#ax.legend(loc='best')
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()

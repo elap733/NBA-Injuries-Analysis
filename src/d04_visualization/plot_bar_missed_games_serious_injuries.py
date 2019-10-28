@@ -3,6 +3,10 @@
 This script creates a bar chart of games missed due to serious injuries. Each 
 bar represents a year.
 
+Serious injuries = an injury causing a player to miss more than 15 games
+
+Excludes players averaging less than 10 minutes per game
+
 Required inputs:
     -mg_il_ps_merged_df.p
     
