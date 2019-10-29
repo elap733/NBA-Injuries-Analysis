@@ -52,9 +52,9 @@ For the purposes of this analysis, I nominally define "serious injuries" as thos
    * Examine correlations between player age and usage (games played, minutes played) and injury events
    * Constrain analysis to players with a minimum amount of playing times (I chose a 10 minutes per game average); this eliminates noise due to reserve/transient players.
 
-## What makes _this_ NBA injury analysis unique?
+## What makes this NBA injury analysis unique?
 
-This project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends. It is however the unique in that it **ties both NBA schedule data and player stats/bio to transactions. The merging of injury transactions and schedule data allowed me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occurred**. The latter is a rather naïve metric for tracking injuries because it treats all injuries as equal (a sore hamstring != a torn achilles)). Consider the plots below:
+While this project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends, it is unique in that it **ties both NBA schedule data and player stats/bio to transactions. The merging of injury transactions and schedule data allowed me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occurred**. The latter is an imperfect metric for tracking injuries because it treats all injuries as equal (a sore hamstring != a torn achilles)). Consider the plots below:
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_events.png)
 *Fig.3: Count of **injury events (transactions)** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*

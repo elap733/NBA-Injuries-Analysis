@@ -55,26 +55,54 @@ player_stats_df = player_stats_df[player_stats_df['MPPG'] > 10.0]
 #Only keep players 2010-2019 seasons
 player_stats_df = player_stats_df[player_stats_df['Year']> 2009]
 #--------------------------Plots------------------------------------------------
-data = player_stats_df[~player_stats_df['Year'].isin([2017,2018])]
-data = data[['Age','TMP_prior_seasons']]
+#player stats for 2017 and 2018 NBA seasons
+player_stats_recent_df = player_stats_df[~player_stats_df['Year'].isin([2017,2018])]
+player_stats_recent_df = player_stats_recent_df[['Age','TMP_prior_seasons']]
 
-vis1 = sns.jointplot(data = data, x = "Age", y = "TMP_prior_seasons", kind='kde')
+#create joint plot for showing distribution of age and career minutes for 2017 and 2018 NBA season
+jointplot_ps_recent= sns.jointplot(data = player_stats_recent_df, x = "Age", y = "TMP_prior_seasons", kind='kde')
 
-data = player_stats_df[player_stats_df['Year'].isin([2017,2018])]
-data = data[['Age','TMP_prior_seasons']]
+#format axis labels
+jointplot_ps_recent.set_axis_labels('Age', 'Career Minutes', fontsize=16, weight = 'bold')
 
-vis2 = sns.jointplot(data = data, x = "Age", y = "TMP_prior_seasons", kind='kde', color = 'g')
+#save plot
+jointplot_ps_recent.savefig('../../results/01_plots/distplot_players_recent.png')
 
-data = injury_df[~injury_df['Year'].isin([2017,2018])]
-data = data[['Age','TMP_prior_seasons']]
+#player stats for 2010 to 2016 NBA seasons
+player_stats_older_df = player_stats_df[player_stats_df['Year'].isin([2017,2018])]
+player_stats_older_df = player_stats_older_df[['Age','TMP_prior_seasons']]
 
-vis1 = sns.jointplot(data = data, x = "Age", y = "TMP_prior_seasons", kind='kde', color = 'r')
+jointplot_ps_older= sns.jointplot(data = player_stats_older_df, x = "Age", y = "TMP_prior_seasons", kind='kde', color = 'g')
 
-data = injury_df[injury_df['Year'].isin([2017,2018])]
-data = data[['Age','TMP_prior_seasons']]
+#format axis labels
+jointplot_ps_older.set_axis_labels('Age', 'Career Minutes', fontsize=16, weight = 'bold')
 
-vis2 = sns.jointplot(data = data, x = "Age", y = "TMP_prior_seasons", kind='kde', color = 'm')
+#save plot
+jointplot_ps_older.savefig('../../results/01_plots/distplot_players_older.png')
 
+#injuries for 2017 and 2018 seasons
+injuries_recent_df = injury_df[injury_df['Year'].isin([2017,2018])]
+injuries_recent_df = injuries_recent_df[['Age','TMP_prior_seasons']]
+#
+jointplot_inj_recent = sns.jointplot(data = injuries_recent_df, x = "Age", y = "TMP_prior_seasons", kind='kde', color = 'r')
+
+#format axis labels
+jointplot_inj_recent.set_axis_labels('Age', 'Career Minutes', fontsize=16, weight = 'bold')
+
+#save plot
+jointplot_inj_recent.savefig('../../results/01_plots/distplot_inj_recent.png')
+
+#injureis for 2010-2016 NBA seasons
+injuries_older_df = injury_df[~injury_df['Year'].isin([2017,2018])]
+Injureis_older_df = injuries_older_df[['Age','TMP_prior_seasons']]
+#
+jointplot_inj_older = sns.jointplot(data = injuries_older_df, x = "Age", y = "TMP_prior_seasons", kind='kde', color = 'm')
+
+#format axis labels
+jointplot_inj_older.set_axis_labels('Age', 'Career Minutes', fontsize=16, weight = 'bold')
+
+#save plot
+jointplot_inj_older.savefig('../../results/01_plots/distplot_inj_older.png')
 
 #fig, ax = plt.subplots()
 #sns.distplot(player_stats_df['Age'], hist = False, kde_kws={"shade": True}, ax = ax)

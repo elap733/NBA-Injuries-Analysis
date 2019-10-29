@@ -4,7 +4,8 @@ This script creates a stacked bar chart of missed games due to injury. Each
 bar represents a year, each stack with in the corrresponds to an injury "category"
 or "keyword".
 
-***This script plots serious injuries (>15 games missed)***
+Excludes players with less than 10 minutes played per game per season.
+Serious injury = injury that causes a player to miss > 15 games
 
 Required inputs:
     -mg_il_ps_merged_df.p
