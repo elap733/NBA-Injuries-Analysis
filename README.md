@@ -177,6 +177,6 @@ The figure below shows the workflow of scraping, cleaning, and processing that I
 
 ### Folder Structure
 All scripts and data files can be found the appropriate directory below.
-![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/folder_structure.png)
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/folder_structure.png" width="400"/>
 
 
