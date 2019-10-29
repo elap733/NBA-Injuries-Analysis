@@ -138,31 +138,28 @@ We can also look at the demographics of injured player.
 *Fig.14: Distribution plots for player age and career minutes for injuries in the 2017 and 2018 season. [Note: Only includes players averaging 10 minutes per game].*
 
 
-#### Rest and Schedule
-
-**Rest Days**
+#### Rest 
 
 Players may miss games or move temporarily to the inactive list simply for rest. In recent years we see rest days becoming more prevalent (Figure 12). Intuitively I expected that more rest might lead to fewer injuries, but that does not seem to be the case. Rather it may be that players are needing to rest more because of increased injuries. Further investigation is needed, particularly to understand the lack of 2018 rest days reporting.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_rest.png)
 
-*Fig.12: Missed games where 'rest' is cited as the reason. [Note:Included only players averaging 10 minutes per game].*
+*Fig.13: Missed games where 'rest' is cited as the reason. [Note:Included only players averaging 10 minutes per game].*
 
-**Temporal Dependence of Injury Events**
+#### Schedule
+
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_back_to_backs.png)
+
+*Fig.14: Missed games where 'rest' is cited as the reason. [Note:Included only players averaging 10 minutes per game].*
+
+#### Timing of Serious Injuries
 
 Intuitively I expected there to be more injuries later in the season as players wear down, Figure 13 however suggests that the rate of injury is actually fairly constant over the course of the season.
 
-<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/ridge_plot_all_injuries.png" width="400"/>
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/calendar_heat_map_serious_injury.png" width="400"/>
 
-*Fig.13: Count of injury events over the course of an 81+ game season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game]*
+*Fig.15: Count of injury events over the course of an 81+ game season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game]*
 
-**Correlations To Player Usage and Age**
-
-Finally, I expected to see some positive correlation betweeen player age or player usage (total minutes played in prior seasons) with missed games. The correlation matrix below suggests that this is not actually the case.
-
-![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/correlation_plots.png)
-
-*Fig.14: Correlatin plot of player age, cummulative minutes player over prior seasons, and missed games due to injury. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game]*
 
 ## Conclusions
 
