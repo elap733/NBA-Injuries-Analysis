@@ -81,9 +81,9 @@ Likewise, Figures 6  provides evidence that the last two seasons have experience
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_serious_injuries_c2018.png)
 *Fig.6: Count of **missed games due to serious injuries** each season. [Note: Excludes "non-injury" events including missed games due to personal reasons, rest, sickness; Excludes injuries affecting players averaging less than 10 minutes per game].*
 
-While these plots provide evidence to support my original hypothesis, further data exploration is necessary to  understand why this behavior is occuring. It may simply be due to randonmess of injuries (a serious injury at the start of the season will result in more missed games than an injury near the end of the season) or it could a real trend that might give the teams and players cause for concern.
+While these plots provide evidence to support my original hypothesis, further data exploration is necessary to  understand why this behavior is occuring. It may simply be due to randonmess of injuries (for instance, note that a serious injury at the start of the season will result in more missed games than an injury near the end of the season) or it could a real trend that should give teams and players cause for concern.
 
-#### Injury Types
+#### Injury Types - All Injury Durations
 
 The next thing we can look at is the type of injuries that are occuring. Figure 7 is a word cloud representation of the injury "notes" provided with each injury transaction. 
 
@@ -93,18 +93,20 @@ The next thing we can look at is the type of injuries that are occuring. Figure 
    *Fig.6: Word cloud of injury "notes" built from 2010-2019 NBA seasons transaction data*
 </p>
 
-There were literally hundreds of variations of injury notes and as such it was necessary to process the text prior to analysis. For each note I extracted an injury "key word" (a specific body part), and then further group these "key words" into categories (body regions). Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games across all seasons, 2017 and 2018 included. The proportion of injuries appears relatively consistent across all seasons.
+There were many unique variations of injury notes and as such it was necessary to process the text prior to analysis. For each note I extracted an injury "key word" (a specific body part), and then further group these "key words" into categories (body regions). Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games across all seasons, 2017 and 2018 included. The proportion of injuries appears relatively consistent across all seasons.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_all_injuries.png)
 *Fig.7: Count of **missed games (all injury durations)** each season, broken down by **affected body region**. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
-We can look at this in finer granuality by breaking down body regions in to body parts.  In Figure 8 below, I visually map the count of missed games to specific body parts. Circle size is proportional to the number of missed games.
+We can look at injuries in finer granuality by breaking down body regions in to body parts.  In Figure 8 below, I visually map the count of missed games to specific body parts. Circle size is proportional to the number of missed games.
 
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/hor_bar_all_injuries2018.png" width="400"/><img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_all_injuries2018.png" width="400"/>
 
 *Fig.8: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
-If we limit our analysis to serious injuries (more than 15 games missed), in Figure 9 and Figure 10 below, not suprisingly we see that ankle, knee, and foot are the top injuries. 
+#### Injury Types - Serious Injuries
+
+We can also limit our analysis to serious injuries (more than 15 games missed). In Figure 9 and Figure 10 below, we see that ankle, knee, and foot account for the majority of serious injuries. 
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_serious_injuries.png)
 *Fig.9: Count of **missed games due to serious injuries** each season, broken down by **affected body region**. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
@@ -113,15 +115,34 @@ If we limit our analysis to serious injuries (more than 15 games missed), in Fig
 
 *Fig.10: Mapping of 2018-2019 missed games due to serious injury to specific body parts. Circle size is proportional to number of missed games.[Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
-Though this is interesting, it does not provide any explanations for the increase in injuries.
+Unfortunately these plots do not reveal any unusual trends that might explain the increased in missed games in recent seasons.
+
+#### Player Demographics
+
+One possible explanation for the increase injuries may be that player demographics have changed. Could the league be getting older? Is the average player age increasing? Do active players in 2018 have more career minutes than active players in previous seasons? Did players in 2017 and 2018 come into the start of the season with more "wear and tear" than in prior seasons (2010-2016). One way to answer to these questions is to consider the distribution plots below.
+
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_players_older.png)
+*Fig.11: Distribution plots for player age and career minutes going in to the 2010-2016 seasons. [Note: Only includes players averaging 10 minutes per game].*
+
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_players_recent.png)
+*Fig.12: Distribution plots for player age and career minutes going in to the 2017 and 2018 season. [Note: Only includes players averaging 10 minutes per game].*
+
+A visual comparison between Fig 11 and 12 does not reveal any significan differences between 2017/2018 seasons and 2010-2016 seasons
+
+We can also look at the demographics of injured player.
+
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_inj_older.png)
+*Fig.13: Distribution plots for player age and career minutes for injuries in the 2010-2016 seasons. [Note: Only includes players averaging 10 minutes per game].*
+
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_inj_recent.png)
+*Fig.14: Distribution plots for player age and career minutes for injuries in the 2017 and 2018 season. [Note: Only includes players averaging 10 minutes per game].*
+
 
 #### Rest and Schedule
 
- 
-
 **Rest Days**
 
-Players may miss games or move temporarily to the inactive list simply for rest. In recent years we see rest days becoming more prevalent (Figure 12). Intuitively I expected more rest might lead to fewer injuries, but that does not seem to be the case. Rather it may be that players are needing to rest more because of increased injuries. Further investigation is needed, particularly to understand the lack of 2018 rest days reporting.
+Players may miss games or move temporarily to the inactive list simply for rest. In recent years we see rest days becoming more prevalent (Figure 12). Intuitively I expected that more rest might lead to fewer injuries, but that does not seem to be the case. Rather it may be that players are needing to rest more because of increased injuries. Further investigation is needed, particularly to understand the lack of 2018 rest days reporting.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_rest.png)
 
