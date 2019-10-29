@@ -122,9 +122,11 @@ Unfortunately these plots do not reveal any unusual trends that might explain th
 One possible explanation for the increase injuries may be that player demographics have changed. Could the league be getting older? Is the average player age increasing? Do active players in 2018 have more career minutes than active players in previous seasons? Did players in 2017 and 2018 come into the start of the season with more "wear and tear" than in prior seasons (2010-2016). One way to answer to these questions is to consider the distribution plots below.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_players_older.png)
+
 *Fig.11: Distribution plots for player age and career minutes going in to the 2010-2016 seasons. [Note: Only includes players averaging 10 minutes per game].*
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_players_recent.png)
+
 *Fig.12: Distribution plots for player age and career minutes going in to the 2017 and 2018 season. [Note: Only includes players averaging 10 minutes per game].*
 
 A visual comparison between Fig 11 and 12 does not reveal any significan differences between 2017/2018 seasons and 2010-2016 seasons
@@ -132,9 +134,11 @@ A visual comparison between Fig 11 and 12 does not reveal any significan differe
 We can also look at the demographics of injured player.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_inj_older.png)
+
 *Fig.13: Distribution plots for player age and career minutes for injuries in the 2010-2016 seasons. [Note: Only includes players averaging 10 minutes per game].*
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_inj_recent.png)
+
 *Fig.14: Distribution plots for player age and career minutes for injuries in the 2017 and 2018 season. [Note: Only includes players averaging 10 minutes per game].*
 
 
@@ -156,7 +160,7 @@ Players may miss games or move temporarily to the inactive list simply for rest.
 
 Intuitively I expected there to be more injuries later in the season as players wear down, Figure 13 however suggests that the rate of injury is actually fairly constant over the course of the season.
 
-<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/calendar_heat_map_serious_injury.png" width="400"/>
+![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/calendar_heat_map_serious_injury.png)
 
 *Fig.15: Count of injury events over the course of an 81+ game season. [Note: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game]*
 
