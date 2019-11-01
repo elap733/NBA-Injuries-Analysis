@@ -78,6 +78,10 @@ for tick in ax.get_yticks():
     
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
+#plot title
+ax.set_title('Games Missed Due to SERIOUS Injuries', fontsize = 24, weight= 'bold')
+
+
 ## Set legend properties
 #ax.legend(list(data.columns), fontsize = 16)
 #ax.legend(loc='best')
