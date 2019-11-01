@@ -64,7 +64,7 @@ ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Games Missed Due to Injury", fontsize =16,weight='bold')
+ax.set_ylabel("Count of Games Missed Due to Injury", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
@@ -78,6 +78,9 @@ ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
 # Set legend properties
 lgd = ax.legend(loc='center left', bbox_to_anchor=(1.0, 0.6), fontsize =18)
+
+# text box "Serious Injuries"
+ax.set_title('Games Missed Due to SERIOUS Injuries', fontsize = 24, weight= 'bold')
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()
 fig.savefig(plot_savepath, dpi = 300, bbox_extra_artists=(lgd,), bbox_inches='tight')

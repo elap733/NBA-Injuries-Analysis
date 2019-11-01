@@ -220,16 +220,16 @@ plt.scatter(550, 260, s=(200/max_value*max_size), marker='o', facecolors='none',
 ax.text(0.85, 0.65, str(int(200)), transform=ax.transAxes, fontsize=18, weight ='bold', verticalalignment='top')
  
 # text box one
-ax.text(0.60, 0.77, ('{}/{} Season '.format(year, (year+1))), transform=ax.transAxes, fontsize=18, weight ='bold', verticalalignment='top')    
+ax.text(-0.50, 0.71, ('{}/{} Season '.format(year, (year+1))), transform=ax.transAxes, fontsize=24, weight ='bold', verticalalignment='top')    
 # text box two
-ax.text(0.685, 0.73, 'Missed Games', transform=ax.transAxes, fontsize=18, weight ='bold', verticalalignment='top')    
+ax.text(0.685, 0.73, 'Missed Games', transform=ax.transAxes, fontsize=20, weight ='bold', verticalalignment='top')    
 
 # text box two
-ax.text(0.0001, 0.99, 'All Injury Durations', transform=ax.transAxes, fontsize=16,weight ='bold', verticalalignment='top')   
+title = ax.text(-0.50, 0.62, 'All Injuries', transform=ax.transAxes, fontsize=24,weight ='bold', verticalalignment='top')   
 
 plt.axis('off')
 plt.show()
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()
-fig.savefig(plot_savepath, dpi = 300)
+fig.savefig(plot_savepath, dpi = 300, bbox_extra_artists=(title,), bbox_inches='tight')

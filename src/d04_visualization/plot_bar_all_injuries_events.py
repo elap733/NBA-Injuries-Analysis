@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-This script creates a bar chart of games missed due to injuries. Each 
-bar represents a year.
+This script creates a bar chart of the injury events (or "transactions") each 
+season. Each bar represents a year.
+
 
 Required inputs:
     -mg_il_ps_merged_df.p
     
 Outputs:
-    -stacked bar chart
+    - bar chart
     
 @author: evanl
 """
@@ -15,17 +16,15 @@ Outputs:
 import pandas as pd
 import pickle
 
+
 pd.set_option('display.expand_frame_repr', False)
 
 #--------------------------User Inputs---------- ----------------------
 #file path for pickle of concatenated/merged mg,il, player stats dataframes
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
-#save path for plot with a differnet color for each column
-#plot_savepath =  '../../results/01_plots/bar_missed_games_all_injuries.png'
-
-#save path for plot with a differnet color for 2018
-#plot_savepath =  '../../results/01_plots/bar_missed_games_all_injuries_c2018.png'
+#save path for plot
+plot_savepath =  '../../results/01_plots/bar_plot_injury_events.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -48,19 +47,16 @@ injury_df = injury_df[~ injury_df['category'].isin(['healthy inactive','rest','s
 #------------------------Make plots-------------------------------------------
 
 #group by year, category, and sum total missed games. Unstack to plot
-data = injury_df.groupby(['Year'])['Tot_games_missed'].sum()
+data = injury_df.groupby(['Year']).size()
 
 #create plot
-#ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
-
-#create plot
-ax = data.plot(kind='bar', stacked=True, figsize=(15, 10), color = ['dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'red'])
+ax = data.plot(kind='bar', stacked=True, figsize=(15, 10), color = ['dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray'])
 
 # Set the x-axis label
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Games Missed Due to Injury", fontsize =16,weight='bold')
+ax.set_ylabel("Count of Injury Events", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
