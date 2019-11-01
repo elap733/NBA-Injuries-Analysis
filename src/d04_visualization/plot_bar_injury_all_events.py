@@ -3,8 +3,6 @@
 This script creates a bar chart of the injury events (or "transactions") each 
 season. Each bar represents a year.
 
-***This script plots serious injuries (>15 games missed)***
-
 Required inputs:
     -mg_il_ps_merged_df.p
     
@@ -25,7 +23,7 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot
-plot_savepath =  '../../results/01_plots/bar_plot_injury_serious_events.png'
+plot_savepath =  '../../results/01_plots/bar_plot_all__events.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -72,7 +70,7 @@ for tick in ax.get_yticks():
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
 #plot title
-ax.set_title('SERIUOS Injury Events', fontsize = 24, weight= 'bold')
+ax.set_title('SERIOUS Injury Events', fontsize = 24, weight= 'bold')
 
 ## Set legend properties
 #ax.legend(list(data.columns), fontsize = 16)

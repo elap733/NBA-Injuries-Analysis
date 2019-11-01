@@ -1,13 +1,18 @@
-NBA-Injuries-Analysis
+# NBA-Injuries-Analysis
 
 This README provides an overview of the NBA-Injury-Analyses project contained within this repository. This project consists of web-scraping (from multiple sources), extensive data cleaning, data processing (merging datasets, feature engineering), and the creation of visualizations to generate useful insights. 
 
 ## Table of contents
 * [Motivation](#motivation)
 * [Objective](#objective)
-* [Data Sources](#data-sources)
+* [Methodology](#methodology)
+  * [Scraping](#scraping)
+  * [Cleaning](#cleaning)
+  * [Processing](#processing)
 * [What Makes This NBA Injury Analysis Unique](#what-makes-this-nba-injury-analysis-unique)
-* [Results](#results)
+* [Analysis](#analysis)
+  * [Analysis of Injury Trends](#analysis-of-injury-trends)
+  * [Analysis of Other Factors](#analysis-of-other-factors)
 * [Conclusion](#conclusion)
 * [Repositiory Structure](#repository_structure)
 ## Motivation	

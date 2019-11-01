@@ -22,10 +22,8 @@ pd.set_option('display.expand_frame_repr', False)
 injury_df_filepath =  '../../data/03_processed/mg_il_ps_merged_df.p'
 
 #save path for plot with a differnet color for each column
-#plot_savepath =  '../../results/01_plots/bar_missed_games_all_injuries.png'
+plot_savepath =  '../../results/01_plots/bar_missed_games_all_injuries.png'
 
-#save path for plot with a differnet color for 2018
-#plot_savepath =  '../../results/01_plots/bar_missed_games_all_injuries_c2018.png'
 
 #-------------------------Load Files------------------------------------------
 #load player injury event dataframe
@@ -54,13 +52,13 @@ data = injury_df.groupby(['Year'])['Tot_games_missed'].sum()
 #ax = data.plot(kind='bar', stacked=True, figsize=(15, 10))
 
 #create plot
-ax = data.plot(kind='bar', stacked=True, figsize=(15, 10), color = ['dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'red'])
+ax = data.plot(kind='bar', stacked=True, figsize=(15, 10), color = ['dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray', 'dimgray'])
 
 # Set the x-axis label
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Games Missed Due to Injury", fontsize =16,weight='bold')
+ax.set_ylabel("Count of Games Missed Due to Injury", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
@@ -73,7 +71,7 @@ for tick in ax.get_yticks():
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
 #plot title
-ax.set_title('Injury Events', fontsize = 24, weight= 'bold')
+ax.set_title('Games Missed Due to Injury (All Injuries)', fontsize = 24, weight= 'bold')
 
 ## Set legend properties
 #ax.legend(list(data.columns), fontsize = 16)
