@@ -66,7 +66,7 @@ ax = data.plot(kind='bar', stacked=True, figsize=(15, 10), color = ['dimgray', '
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Games Missed Due to Serious Injury", fontsize =16,weight='bold')
+ax.set_ylabel("Count of Games Missed Due to Serious Injury", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
