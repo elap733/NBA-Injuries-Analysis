@@ -1,0 +1,16 @@
+Packages to import
+
+import os
+import requests
+import pandas as pd
+import time
+from bs4 import BeautifulSoup
+import seaborn 
+from matplotlib import pyplot 
+import pickle
+import unicodedata
+import player_name_standardizer
+import numpy
+from correlate_event_to_game_schedule import correlate_event_to_game_schedule
+from notes_filter import notes_filter
+from datetime import timedelta
