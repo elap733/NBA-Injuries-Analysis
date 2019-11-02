@@ -68,6 +68,9 @@ for tick in ax.get_yticks():
     
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
 
+#plot title
+ax.set_title('Games Missed for Rest', fontsize = 24, weight= 'bold')
+
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()

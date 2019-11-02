@@ -53,7 +53,7 @@ ax = data['Date'].plot(kind='bar',  figsize=(15, 10), color = ['dimgray', 'dimgr
 ax.set_xlabel("Year", fontsize = 16, weight='bold')
 
 # Set the y-axis label
-ax.set_ylabel("Number of Back-to-Backs", fontsize =16,weight='bold')
+ax.set_ylabel("Count of Back-to-Backs", fontsize =16,weight='bold')
 
 # Set the x-axis tick labels
 ax.set_xticklabels(data.index,rotation = 0, fontsize = 16)
@@ -64,6 +64,9 @@ for tick in ax.get_yticks():
     y_tick_labels.append(int(tick))
     
 ax.set_yticklabels(y_tick_labels, fontsize = 16)
+
+#plot title
+ax.set_title('Back-to-Back Game Sets', fontsize = 24, weight= 'bold')
 
 
 #----------------------Save plot---------------------------------------------
