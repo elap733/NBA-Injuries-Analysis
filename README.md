@@ -244,9 +244,9 @@ We can also look at the demographics of injured player, to see if there are any 
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_inj_recent.png)
 
-*Fig.15: Distribution plots for player age and career minutes for injuries in the 2017 and 2018 season. [Note: Only includes players averaging 10 minutes per game].*
+*Fig.16: Distribution plots for player age and career minutes for injuries in the 2017 and 2018 season. [Note: Only includes players averaging 10 minutes per game].*
 
-Not surprisingly injured players tend to be older and have played more minutes than the league average (Fig.11 and 12). There does not however appear to be a significant difference between the demographics of injured players in 2017/2018 and prior seasons (2010-2016).
+Not surprisingly injured players tend to be older and have played more minutes than the league average (Fig.15 and 16). There does not however appear to be a significant difference between the demographics of injured players in 2017/2018 and prior seasons (2010-2016).
 
 #### Schedule
 
