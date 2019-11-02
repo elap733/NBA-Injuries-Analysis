@@ -26,9 +26,11 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
 ## Methodology
 
-The figure below provides a graphical overview of this project's workflow. In the sections which follow, I provide further explanation of the scraping, cleaning, and processing steps that I executed.
+The flowchart below provides a graphical overview of this project's workflow. In the sections which follow, I provide further explanation of the scraping, cleaning, and processing steps that I executed.
 
+<p align="center">
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/workflow.png" width="600"/>
+</p>
 
 ### Scraping
 
@@ -177,22 +179,27 @@ There were many unique text strings in the injury notes and as such it was neces
 
 We can look at injuries in finer granularity by looking at which specific body part have been getting injured.  In Figure 8 below, I visually map the count of missed games to specific body parts for the 2018 season. Circle size is proportional to the number of missed games.
 
-<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/hor_bar_all_injuries2018.png" width="400"/><img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_all_injuries2018.png" width="400"/>
+<p align="center">
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_all_injuries2018.png">
 
 *Fig.8: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games. [Figure notes: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
+</p>
+
 
 #### Injury Types - Serious Injuries
 
-Alternatively we limit our analysis to serious injuries (more than 15 games missed). 
+Alternatively we can limit our analysis to serious injuries (more than 15 games missed). 
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_serious_injuries.png)
 *Fig.9: Count of **missed games due to serious injuries** each season, broken down by **affected body region**. [Figure notes: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
-<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/hor_bar_serious_injuries2018.png" width="400"/><img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_serious_injuries2018.png" width="400"/>
+<p align="center">
+<img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_serious_injuries2018.png">
 
 *Fig.10: Mapping of 2018-2019 missed games due to serious injury to specific body parts. Circle size is proportional to number of missed games.[Figure notes: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
+</p>
 
-In Figure 9 and Figure 10 below, we see that ankle, knee, and foot account for the majority of serious injuries - a relatively consistent trend across seasons. 
+In Figure 9 and Figure 10 above, we see that ankle, knee, and foot account for the majority of serious injuries - a relatively consistent trend across seasons. 
 
 ### Analysis of Other Factors
 
