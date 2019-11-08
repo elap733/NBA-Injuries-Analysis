@@ -26,7 +26,7 @@ The objective of this project was to determine if serious injuries **_are_** rea
 
 ## Methodology
 
-The flowchart below provides a graphical overview of this project's workflow. In the sections which follow, I provide further explanation of the scraping, cleaning, and processing steps that I executed.
+The flowchart below provides an overview of this project's workflow. In the sections which follow, I provide further explanation of the scraping, cleaning, and processing steps that I executed.
 
 <p align="center">
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/references/02_images/workflow.png" width="600"/>
@@ -126,7 +126,7 @@ _Merging processed Inactive List / Missed Game Events data with Player Stats dat
 - Merge datasets on "player name" and "year" columns
 
 ## Analysis  
-This analysis only includes players averaging more than 10 minutes per game in the season in which the injury occurred. For the purposes of this analysis,  "serious injuries" are defined as those causing a player to miss 15 or more games.
+This analysis focuses on players averaging more than 10 minutes per game in a given season. For the purposes of this analysis,  "serious injuries" are defined as those causing a player to miss 15 or more games.
 
 ### Analysis of Injury Trends
 
@@ -158,7 +158,7 @@ Figure 6 is a word cloud representation of the injury "notes" provided with each
 
 <p align="center">
    <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/word_cloud.png">
- 
+
    *Fig.6: Word cloud of injury "notes" built from 2010-2019 NBA seasons transaction data*
 </p>
 
@@ -167,7 +167,7 @@ There were many unique text strings in the injury notes and as such it was neces
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_all_injuries.png)
 *Fig.7: Count of **missed games (all injury durations)** each season, broken down by **affected body region**. [Figure notes: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game].*
 
-We can look at injuries in finer granularity by looking at which specific body part have been getting injured.  In Figure 8 below, I visually map the count of missed games to specific body parts for the 2018 season. Circle size is proportional to the number of missed games.
+We can look at injuries in finer granularity by examining which specific body parts have been getting injured the most.  In Figure 8 below, I map the count of missed games to specific body parts for the 2018 season. Circle size is proportional to the number of missed games.
 
 <p align="center">
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_all_injuries2018.png">
