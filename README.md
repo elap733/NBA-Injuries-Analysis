@@ -148,7 +148,7 @@ Likewise, Figures 5  provides evidence that the last two seasons have experience
 
 One can argue that from the perspective of both teams and fans, its not the number of injury events that really matters, but rather the number of games missed.
 
-While these plots provide evidence to support my original hypothesis, further data exploration is necessary to  understand why this behavior is occurring. This could be a real trend that should give teams and players cause for concern or this "trend" may simply be due to the randomness of injuries. For instance, note that a serious injury at the start of the season will result in more missed games than an injury near the end of the season. 
+While these plots provide evidence to support my original hypothesis, further data exploration is necessary to  understand why this behavior is occurring. This could be a real trend that should give teams and players cause for concern, or this "trend" may simply be due to the randomness of injuries. For instance, a serious injury at the start of the season will result in more missed games than an injury that occurs near the end of the season, simply because of timing.
 
 #### Injury Types - All Injury Durations
 
