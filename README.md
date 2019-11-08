@@ -9,12 +9,12 @@ This README provides an overview of the NBA-Injury-Analyses project contained wi
   * [Scraping](#scraping)
   * [Cleaning](#cleaning)
   * [Processing](#processing)
-* [What Makes This NBA Injury Analysis Unique](#what-makes-this-nba-injury-analysis-unique)
 * [Analysis](#analysis)
   * [Analysis of Injury Trends](#analysis-of-injury-trends)
   * [Analysis of Other Factors](#analysis-of-other-factors)
 * [Conclusion](#conclusion)
 * [Repositiory Structure](#repository_structure)
+
 ## Motivation	
 The outcome of the 2018/2019 NBA season was largely shaped by a rash of devastating injuries to star players, including Kevin Durant, Klay Thompson, DeMarcus Cousins, and Victor Oladipo. In recent years there **_seems_** to be an increasing number of high profile players experiencing serious injuries (ACL tears, achilles ruptures, lower leg fractures), in turn causing them to miss significant playing time, often to the detriment of their team's success.
 
@@ -126,7 +126,7 @@ _Merging processed Inactive List / Missed Game Events data with Player Stats dat
 - Merge datasets on "player name" and "year" columns
 
 ## Analysis  
-This analysis examines the injury trends briefly previewed in Figures 4 and 5. This analysis only includes players averaging more than 10 minutes per game in the season in which the injury occurred. For the purposes of this analysis,  "serious injuries" are defined as those causing a player to miss 15 or more games.
+This analysis only includes players averaging more than 10 minutes per game in the season in which the injury occurred. For the purposes of this analysis,  "serious injuries" are defined as those causing a player to miss 15 or more games.
 
 ### Analysis of Injury Trends
 
@@ -158,6 +158,7 @@ Figure 6 is a word cloud representation of the injury "notes" provided with each
 
 <p align="center">
    <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/word_cloud.png">
+ 
    *Fig.6: Word cloud of injury "notes" built from 2010-2019 NBA seasons transaction data*
 </p>
 
