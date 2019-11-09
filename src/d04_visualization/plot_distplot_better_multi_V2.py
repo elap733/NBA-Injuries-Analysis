@@ -59,13 +59,13 @@ player_stats_df = player_stats_df[player_stats_df['MPPG'] > 10.0]
 player_stats_df = player_stats_df[player_stats_df['Year']> 2009]
 
 #player stats for 2017 and 2018 NBA seasons
-player_stats_recent_df = player_stats_df[~player_stats_df['Year'].isin([2017,2018])]
+player_stats_recent_df = player_stats_df[player_stats_df['Year'].isin([2017,2018])]
 
 #age and minutes played for all players with >10 MPPG, 2017-2018 NBA seasons
 player_stats_recent_df = player_stats_recent_df[['Age','TMP_prior_seasons']]
 
 #player stats for 2010 to 2016 NBA seasons
-player_stats_older_df = player_stats_df[player_stats_df['Year'].isin([2017,2018])]
+player_stats_older_df = player_stats_df[~player_stats_df['Year'].isin([2017,2018])]
 
 #age and minutes played for all players with >10 MPPG, 2010-2016 NBA seasons
 player_stats_older_df = player_stats_older_df[['Age','TMP_prior_seasons']]
