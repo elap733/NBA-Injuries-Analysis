@@ -213,17 +213,19 @@ Interestingly there appears to be an unbelievable result - zero games were misse
 
 #### Player Usage
 
-One possible explanation for the increase injuries may be that player demographics have changed over time. Could the league be getting older? Is the average player age increasing? Did players in 2017 and 2018 come into the start of the season with more "wear and tear" (career minutes) than in prior seasons (2010-2016)? One way to answer to these questions is to consider the distribution plots below.
+One possible explanation for the increase injuries may be that player demographics have changed over time. Is the average player age increasing? Did players in 2017 and 2018 come into the start of the season with more "wear and tear" (career minutes) than in prior seasons (2010-2016)?  Let's investigate these questions in the plots below.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_age_all.png)
 
 *Fig.12: Distribution plot comparing player ages in the 2010-2016 seasons(blue curve) and 2017-2018 seasons (red curve). [Note: Only includes players averaging 10 minutes per game].*
 
+Fig 12 compares the distribution of player ages (all players averaging 10 MPPG in a given season) in the 2010-2016 seasons and the 2017-2018 seasons. The distributions appear fairly similar, however we do see some subtle differences particularly in the 35-40 year demographic, and evidence that the 2010-2016 seasons may have actually had an older player population than the 2017-2018 seasons.
+
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_min_all.png)
 
 *Fig.13: Distribution plot comparing career minutes played entering each of the 2010-2016 seasons (blue curve) and each of the 2017-2018 seasons (red curve). [Note: Only includes players averaging 10 minutes per game].*
 
-A visual comparison between Fig 12 and 13 does not reveal any significant differences between 2017/2018 seasons and 2010-2016 seasons
+Fig 13 compares the distribution of all players' career minutes entering a given season. The distributions closely overlap, though the 2010-2016 seasons do seemed to be skewed ever so slightly to the right(higher career minutes), consistent with the age trends in Fig. 12
 
 We can also look at the demographics of injured player, to see if there are any interesting trends there.
 
@@ -235,7 +237,7 @@ We can also look at the demographics of injured player, to see if there are any 
 
 *Fig.15: Distribution plot comparing career minutes played entering each of the 2010-2016 seasons (blue curve) and each of the 2017-2018 seasons (red curve) for _injured players_. [Note: Only includes players averaging 10 minutes per game].*
 
-Not surprisingly injured players tend to be older and have played more minutes than the league average (Fig.14 and 15). There does not however appear to be a significant difference between the demographics of injured players in 2017/2018 and prior seasons (2010-2016).
+The difference in demographics of _injured players_ in 2017-2018 and prior seasons (2010-2016) appears more pronounced. Injured players in the 2017-2018 seasons tended to be younger and have fewer career minutes than injured players in the 2010-2016 seasons. An older player population does not seem to be the driving force for the spike in injuries.
 
 #### Schedule
 
