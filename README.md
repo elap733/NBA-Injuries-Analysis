@@ -186,6 +186,7 @@ Alternatively we can limit our analysis to serious injuries (more than 15 games 
 <p align="center">
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_serious_injuries2018.png">
 </p>
+
 *Fig.10: Mapping of 2018-2019 missed games due to serious injury to specific body parts. Circle size is proportional to number of missed games.[Figure notes: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
 
