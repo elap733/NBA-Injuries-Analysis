@@ -77,10 +77,10 @@ injuries_recent_df = injury_df[injury_df['Year'].isin([2017,2018])]
 injuries_recent_df = injuries_recent_df[['Age','TMP_prior_seasons']]
 
 #injuries for 2010 to 2016 NBA seasons
-injuries_older_df = injuries_df[~injuries_df['Year'].isin([2017,2018])]
+injuries_older_df = injury_df[~injury_df['Year'].isin([2017,2018])]
 
 #age and minutes played for injured players with >10 MPPG, 2010-2016 NBA seasons
-injuries_older_df = injuries_older_df[['Age','TMP_prior_seasons']
+injuries_older_df = injuries_older_df[['Age','TMP_prior_seasons']]
 
 
 #-------------Create "All Players" Age and Minutes played plots----------------
@@ -91,15 +91,17 @@ sns.distplot(player_stats_older_df['Age'].values,color ='b', hist = False, kde_k
 
 sns.distplot(player_stats_recent_df['Age'].values,color ='r', hist = False, kde_kws={"shade": True}, ax = ax)
 
+ax.set(xlim = (14,50))
 ax.set_xlabel(xlabel ='Age', fontsize = 16, weight = 'bold')
-ax.set_xticklabels(ax.get_xticks(), fontsize = 16)
+xlabels = [str(int(x)) for x in ax.get_xticks()]
+ax.set_xticklabels(xlabels, fontsize = 16)
 ax.set_yticklabels(ax.get_yticks(), fontsize =16)
 ax.legend(labels=[ '2010-2016 seasons', '2017-2018 seasons'], fontsize =14, loc='best')
 title = ax.set_title(label = 'All Players (>10 MPPG)',fontsize=15,weight ='bold', )   
 
 #Save plot
 fig = ax.get_figure()
-fig.savefig(plot_savepath_age_all)
+fig.savefig(plot_savepath_age_all, dpi = 300, bbox_extra_artists=(), bbox_inches='tight')
 
 #Create dist plot comparing distribution of cummulative minutes played in prior seasons
 fig, ax = plt.subplots()
@@ -109,46 +111,52 @@ sns.distplot(player_stats_older_df['TMP_prior_seasons'].values,color ='b', hist 
 sns.distplot(player_stats_recent_df['TMP_prior_seasons'].values,color ='r', hist = False, kde_kws={"shade": True}, ax = ax)
 
 ax.set_xlabel(xlabel ='Career Minutes Played Entering Season', fontsize = 16, weight = 'bold')
-ax.set_xticklabels(ax.get_xticks(), fontsize = 16)
-ax.set_yticklabels(ax.get_yticks(), fontsize =16)
+xlabels = [str(int(x)) + 'K' for x in ax.get_xticks()/1000]
+ax.set_xticklabels(xlabels, fontsize = 16)
+ylabels = ['{0:.1E}'.format(y) for y in ax.get_yticks()]
+ax.set_yticklabels(ylabels, fontsize =16)
 ax.legend(labels=[ '2010-2016 seasons', '2017-2018 seasons'], fontsize =14, loc='best')
 title = ax.set_title(label = 'All Players (>10 MPPG)',fontsize=15,weight ='bold', )   
 
 #Save plot
 fig = ax.get_figure()
-fig.savefig(plot_savepath_minutes_all)
+fig.savefig(plot_savepath_minutes_all, dpi = 300, bbox_extra_artists=(), bbox_inches='tight')
 
 #-------------Create "Injured Players" Age and Minutes played plots----------------
 #Create dist plot comparing player age distributions 
 fig, ax = plt.subplots()
              
-sns.distplot(injured_older_df['Age'].values,color ='b', hist = False, kde_kws={"shade": True}, ax = ax)
+sns.distplot(injuries_older_df['Age'].values,color ='b', hist = False, kde_kws={"shade": True}, ax = ax)
 
-sns.distplot(injured_recent_df['Age'].values,color ='r', hist = False, kde_kws={"shade": True}, ax = ax)
+sns.distplot(injuries_recent_df['Age'].values,color ='r', hist = False, kde_kws={"shade": True}, ax = ax)
 
+ax.set(xlim = (14,50))
 ax.set_xlabel(xlabel ='Age', fontsize = 16, weight = 'bold')
-ax.set_xticklabels(ax.get_xticks(), fontsize = 16)
+xlabels = [str(int(x)) for x in ax.get_xticks()]
+ax.set_xticklabels(xlabels, fontsize = 16)
 ax.set_yticklabels(ax.get_yticks(), fontsize =16)
 ax.legend(labels=[ '2010-2016 seasons', '2017-2018 seasons'], fontsize =14, loc='best')
 title = ax.set_title(label = 'Injured Players (>10 MPPG)',fontsize=15,weight ='bold', )   
 
 #Save plot
 fig = ax.get_figure()
-fig.savefig(plot_savepath_age_injured)
+fig.savefig(plot_savepath_age_injured, dpi = 300, bbox_extra_artists=(), bbox_inches='tight')
 
 #Create dist plot comparing distribution of cummulative minutes played in prior seasons
 fig, ax = plt.subplots()
              
-sns.distplot(injured_older_df['TMP_prior_seasons'].values,color ='b', hist = False, kde_kws={"shade": True}, ax = ax)
+sns.distplot(injuries_older_df['TMP_prior_seasons'].values,color ='b', hist = False, kde_kws={"shade": True}, ax = ax)
 
-sns.distplot(injured_recent_df['TMP_prior_seasons'].values,color ='r', hist = False, kde_kws={"shade": True}, ax = ax)
+sns.distplot(injuries_recent_df['TMP_prior_seasons'].values,color ='r', hist = False, kde_kws={"shade": True}, ax = ax)
 
 ax.set_xlabel(xlabel ='Career Minutes Played Entering Season', fontsize = 16, weight = 'bold')
-ax.set_xticklabels(ax.get_xticks(), fontsize = 16)
-ax.set_yticklabels(ax.get_yticks(), fontsize =16)
+xlabels = [str(int(x)) + 'K' for x in ax.get_xticks()/1000]
+ax.set_xticklabels(xlabels, fontsize = 16)
+ylabels = ['{0:.1E}'.format(y) for y in ax.get_yticks()]
+ax.set_yticklabels(ylabels, fontsize =16)
 ax.legend(labels=[ '2010-2016 seasons', '2017-2018 seasons'], fontsize =14, loc='best')
 title = ax.set_title(label = 'Injured Players (>10 MPPG)',fontsize=15,weight ='bold', )   
 
 #Save plot
 fig = ax.get_figure()
-fig.savefig(plot_savepath_minutes_injured)
+fig.savefig(plot_savepath_minutes_injured,dpi = 300, bbox_extra_artists=(), bbox_inches='tight')
