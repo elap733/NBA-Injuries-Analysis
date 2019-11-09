@@ -84,13 +84,25 @@ player_stats_older_df = player_stats_older_df[['Age','TMP_prior_seasons']]
 #    )
 
 #g.plot_joint(plt.scatter(player_stats_older_df['Age'], player_stats_older_df['TMP_prior_seasons'], color = 'r'))
+
+fig, ax = plt.subplots()
              
-sns.distplot(player_stats_older_df['Age'].values,color ='b', hist = False, kde_kws={"shade": True})
+sns.distplot(player_stats_older_df['Age'].values,color ='b', hist = False, kde_kws={"shade": True}, ax = ax)
 
 #sns.distplot(player_stats_older_df['TMP_prior_seasons'].values,ax=g.ax_marg_y, color='b', hist = False, kde_kws={"shade": True}, vertical=True)
 
-sns.distplot(player_stats_recent_df['Age'].values,color ='r', hist = False, kde_kws={"shade": True})
+sns.distplot(player_stats_recent_df['Age'].values,color ='r', hist = False, kde_kws={"shade": True}, ax = ax)
 
+ax.set_xlabel(xlabel ='Age', fontsize = 16, weight = 'bold')
+ax.set_xticklabels(ax.get_xticks(), fontsize = 16)
+ax.set_yticklabels(ax.get_yticks(), fontsize =16)
+ax.legend(labels=[ '2010-2016 seasons', '2017-2018 seasons'], fontsize =14, loc='best')
+ 
+
+# title
+title = ax.set_title(label = 'All NBA Players (>10 MPPG)',fontsize=15,weight ='bold', )   
+
+sns.plt.show()
 #    # Do also global
 
 #save plot
