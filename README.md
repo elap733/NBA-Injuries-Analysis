@@ -165,15 +165,16 @@ Figure 6 is a word cloud representation of the injury "notes" provided with each
 There were many unique text strings in the injury notes and as such it was necessary to process the text prior to analysis. For each note I extracted an injury "key word" (a specific body part), and then further group these "key words" into categories (body regions). Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games across all seasons, 2017 and 2018 included. In general, the proportion of injuries appears relatively constant across all seasons.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_all_injuries.png)
+
 *Fig.7: Count of **missed games (all injury durations)** each season, broken down by **affected body region**. [Figure notes: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game].*
 
 We can look at injuries in finer granularity by examining which specific body parts have been getting injured the most.  In Figure 8 below, I map the count of missed games to specific body parts for the 2018 season. Circle size is proportional to the number of missed games.
 
 <p align="center">
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_all_injuries2018.png">
-*Fig.8: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games. [Figure notes: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 </p>
 
+*Fig.8: Mapping of 2018-2019 missed games to specific body parts. Circle size is proportional to number of missed games. [Figure notes: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game].*
 
 #### Injury Types - Serious Injuries
 
