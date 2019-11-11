@@ -34,7 +34,7 @@ The flowchart below provides an overview of this project's workflow. In the sect
 
 ### Scraping
 
-Using Python's _BeautifulSoup_ package I created four scripts to automate data scraping from the following data sources:
+Using Python's _BeautifulSoup_ package, I created four scripts to automate data scraping from the following data sources:
 
 #### Data Sources 
 
@@ -71,9 +71,9 @@ Using Python's _BeautifulSoup_ package I created four scripts to automate data s
    I also scraped player statistics (1994-2019) from the website [Basketball Reference](http://basketballreference.com/). This scraped dataset of more than 19,000 entries allowed me to:
    * Examine correlations between player age, usage (minutes played) and injury events
    * Constrain my analysis to players with a minimum amount of playing time.
-     * In this analysis I used a threshold of 10 minutes played per game average (i.e. a player must have averaged at least 10 minutes per game during the season in which the injury event occurred)
+     * In this analysis, I used a threshold of 10 minutes played per game average (i.e. a player must have averaged at least 10 minutes per game during the season in which the injury event occurred).
      * By doing this I was able to focus my analysis on the most relevant segment of the player population - starters and first string reserve players.
-       * An additional reason for eliminating second and third-string reserve players is that these players tend to frequently move between the NBA and it's development league (the G-league). During my exploration of NBA inactive list events I found that these G-league transfers actually require a team to place the player on it's inactive list. Unfortunately the transaction "note" for this particular subset of inactive list transactions does not indicate that this is the reason (it only states "placed on IL"). If these players are included in the dataset then their G-league transfers will be wrongly counted as injury events
+       * An additional reason for eliminating second and third-string reserve players is that these players tend to frequently move between the NBA and it's development league (the G-league). During my exploration of NBA inactive list events I found that these G-league transfers actually require a team to place the player on it's inactive list. Unfortunately the transaction "note" for this particular subset of inactive list transactions does not indicate that this is the reason (it only states "placed on IL"). If these players are included in the dataset, then their G-league transfers will be wrongly counted as injury events.
 
 [Link to code for data scraping](https://github.com/elap733/NBA-Injuries-Analysis/tree/master/src/d01_scrapes)
 
@@ -93,14 +93,14 @@ _Cleaning steps_:
 - Formatting team names in a consistent fashion
   - Consistent team name format was critical for merging/linking datasets.
   - Inconsistencies that needed to be handled:
-    - Some datasets used team name abbreviations (e.g. OKC), others used mascots name (e.g. Thunder). My  convention: team name = full city name + mascot (e.g. Oklahoma City Thunder)
+    - Some datasets used team name abbreviations (e.g. OKC), others used mascots name (e.g. Thunder). My convention: team name = full city name + mascot (e.g. Oklahoma City Thunder)
     - Several teams have changed names and cities over the past decade. Some, like the Charlotte Hornets, have changed names and cities multiple times. 
 - Formatting player names in a consistent fashion
   - Consistent player name format/spelling was also critical for merging/linking datasets. 
   - Inconsistencies that needed to be handled:
     - _Basketball Reference_ uses special characters (accents) - _Prosports Transactions_ does not.
     - _Prosports Transactions_ includes suffixes (Jr., Sr., III) - _Basketball Reference_ does not.
-    - Some players have multiple aliases (name spellings) . _Prosports Transactions_ includes all aliases/spellings with each transaction, _Basketball Reference_ uses just a single  name spelling for each player.
+    - Some players have multiple aliases (name spellings) . _Prosports Transactions_ includes all aliases/spellings with each transaction, _Basketball Reference_ uses just a single name spelling for each player.
 
 [Link to code for data cleaning]( https://github.com/elap733/NBA-Injuries-Analysis/tree/master/src/d01_scrapes )
 
@@ -110,7 +110,7 @@ After cleaning I executed the following processing steps to prepare the data for
 
 _Processing of Player Stats data_:
 
-- For every NBA player calculate the following for each season in which they played:
+- For every NBA player, calculate the following for each season in which they played:
   - Total minutes played in prior seasons
   - Total games played in prior seasons
 
@@ -121,8 +121,8 @@ _Processing of NBA Schedules data_:
 
 _Processing of Inactive List_ and _Missed Game Events_ data:
 
-- For each event calculate the number games missed due to that event
-  - This was the important, but also most complicated processing step. It required processed NBA schedule data as an additional input.
+- For each event, calculate the number games missed due to that event
+  - This was the most important, but also most complicated processing step. It required processed NBA schedule data as an additional input.
 - Process transaction "notes" to facilitate injury analysis
   - I filtered transaction "notes" using a "key word" dictionary. This allowed me to sort out which events were due to injury, which events were due to rest, which events were due to sickness, which were due to other personal reasons (e.g. funeral, birth), which events were due to suspension, etc.
   - For those events due to actual injury, I further identified the injured body part (e.g. shin, ankle, knee, shoulder) and body region (e.g. lower leg, upper leg , torso).
@@ -139,7 +139,7 @@ This analysis focuses on players averaging more than 10 minutes per game in a gi
 
 ### Analysis of Injury Trends
 
-While this project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends, it is unique in that it ties both NBA schedule data and player stats to transactions. In particular, the merging of injury transactions and schedule data allowed me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occurred. The latter is an imperfect metric for tracking injuries because it treats all injuries as equal (a sore hamstring != a torn achilles). Consider the plots below:
+While this project is not the first to use [Prosport Transactions](http://prosportstransactions.com/) data to explore injury trends, it is unique in that it ties both NBA schedule data and player stats to transactions. In particular, the merging of injury transactions and schedule data allowed me to determine the number of games missed due to injury, rather than simply looking at the number of "transactions" that occurred. The latter is an imperfect metric for tracking injuries because it treats all injuries as equal (a sore hamstring is not equivalent to a torn achilles). Consider the plots below:
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_plot_injury_events.png)
 **Fig.3: Count of _injury events (transactions)_ each season** [Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_bar_all_injuries_events.py)<br/>*Additional figure notes: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
@@ -161,7 +161,7 @@ While these plots provide evidence to support my original hypothesis, further da
 
 #### Injury Types - All Injury Durations
 
-The next thing we can look at is the type of injuries that have been occurring and see if there any interesting trends in recent years. 
+The next thing we can look at is the type of injuries that have been occurring and see if there are any interesting trends in recent years. 
 
 Figure 6 is a word cloud representation of the injury "notes" provided with each injury transaction. 
 
@@ -171,7 +171,7 @@ Figure 6 is a word cloud representation of the injury "notes" provided with each
 
 **Fig.6: Word cloud of injury "notes" built from 2010-2019 NBA seasons transaction data**[Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_word_cloud.py)*
 
-There were many unique text strings in the injury notes and as such it was necessary to process the text prior to analysis. For each note I extracted an injury "key word" (a specific body part), and then further group these "key words" into categories (body regions). Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games across all seasons, 2017 and 2018 included. In general, the proportion of injuries appears relatively constant across all seasons.
+There were many unique text strings in the injury notes, and as such, it was necessary to process the text prior to analysis. For each note, I extracted an injury "key word" (a specific body part), and then further grouped these "key words" into categories (body regions). Figure 7 below displays a stacked bar chart that breaks down missed games by injured "body region". For instance, "lower leg" encompasses shin, calf, tibia, ankle, and achilles injuries. It's clear that knee and lower leg injuries are the primary driver of missed games across all seasons, 2017 and 2018 included. In general, the proportion of injuries appears relatively constant across all seasons.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/stacked_bar_missed_games_all_injuries.png)
 
@@ -208,13 +208,13 @@ In Figure 9 and Figure 10 above, we see that ankle, knee, and foot account for t
 In order to investigate why players are missing more games in recent years, there are a few additional trends we may want to analyze. Here I look at the following factors:
 
 - _Games missed for rest each season_ - intuitively one might expect that more rest days should reduce injuries; less rest days should contribute to more injuries
-- _Player age/usage_ - how did the age distribution of players in 2017/2018 compare to prior seasons? how did the distribution of career minutes of players in 2017/2018 compare to those in prior seasons?
-- _Schedule (number of back to back sets)_ - If players are playing more back-to-back games this could result in more injuries
-- _Timing of injuries_ - Is when injuries occur during a season changing?
+- _Player age/usage_ - how did the age distribution of players in 2017/2018 compare to prior seasons? How did the distribution of career minutes of players in 2017/2018 compare to those in prior seasons?
+- _Schedule (number of back to back sets)_ - If players are playing more back-to-back games, this could result in more injuries
+- _Timing of injuries_ - Is the timing of when injuries occur during a season changing?
 
 #### Rest 
 
-We can look at the number of games players are missing for rest each season and see how that has changed over time. In Figure 11 we see a dramatic increase in games missed due to rest in 2015, 2016, and 2017, relative to prior seasons. 
+We can look at the number of games players are missing for rest each season and see how that has changed over time. In Figure 11, we see a dramatic increase in games missed due to rest in 2015, 2016, and 2017, relative to prior seasons. 
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_rest.png)
 
@@ -222,25 +222,25 @@ We can look at the number of games players are missing for rest each season and 
 
 Interestingly there appears to be an unbelievable result - zero games were missed for rest in 2018. I closely inspected the data and confirmed that 'rest' is not listed on any of the transaction notes. Yet [media reports](https://www.nbcsports.com/philadelphia/nba-insider-tom-haberstroh/kawhi-leonards-regular-season-rest-could-topple-warriors-dynasty) suggest that players did indeed miss games for rest in 2018 - just like any other season. I believe this result reflects a [change](https://www.espn.com/nba/story/_/id/20851002/nba-board-governors-votes-pass-legislation-draft-lottery-reform-guidelines-resting-healthy-players) in how NBA teams are reporting (or not reporting) rest days. The increase in games missed for rest in 2015 and 2016 was widely panned by fans and the [media](https://www.cbssports.com/nba/news/everything-you-need-to-know-about-the-nbas-rest-controversy-including-solutions/). Fans were understandably unhappy to show up to games see their favorite players play sit on the bench despite being healthy. The absence of reported rest games in 2018 may be the result of NBA teams "disguising" rest games to avoid further fan and media backlash. Rather than noting a missed game was due to rest, teams may be choosing to attribute the missed game to some minor "injury".
 
-While the number of games missed for rested in the 2018 season was certainly non-zero, I do wonder if the NBA's revised rest policy has actually driven down that number relative to prior seasons
+While the number of games missed for rest in the 2018 season was certainly non-zero, I do wonder if the NBA's revised rest policy has actually driven down that number relative to prior seasons.
 
 The 2018 NBA season withstanding, my initial suspicion - that increased injuries may be due to players getting fewer games off for rest - does not seem to be supported by the data. The 2017 season had both a high number of games missed due to injury and games missed for rest. 
 
 #### Player Usage
 
-One possible explanation for the increase injuries may be that player demographics have changed over time. Is the average player age increasing? Did players in 2017 and 2018 come into the start of the season with more "wear and tear" (career minutes) than in prior seasons (2010-2016)?  Let's investigate these questions in the plots below.
+One possible explanation for the increase in injuries may be that player demographics have changed over time. Is the average player age increasing? Did players in 2017 and 2018 come into the start of the season with more "wear and tear" (career minutes) than in prior seasons (2010-2016)?  Let's investigate these questions in the plots below.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_age_all.png)
 
-**Fig.12: Distribution plot comparing player ages in the 2010-2016 seasons(blue curve) and 2017-2018 seasons (red curve)** [Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_distplots_age_minutes.py)<br/>*Additional figure note: Only includes players averaging 10 minutes per game.*
+**Fig.12: Distribution plot comparing player ages in the 2010-2016 seasons (blue curve) and 2017-2018 seasons (red curve)** [Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_distplots_age_minutes.py)<br/>*Additional figure note: Only includes players averaging 10 minutes per game.*
 
-Fig 12 compares the distribution of player ages (all players averaging 10 MPPG in a given season) in the 2010-2016 seasons and the 2017-2018 seasons. The distributions appear fairly similar, however we do see some subtle differences particularly in the 35-40 year demographic, and evidence that the 2010-2016 seasons may have actually had an older player population than the 2017-2018 seasons.
+Fig 12 compares the distribution of player ages (all players averaging 10 MPPG in a given season) in the 2010-2016 seasons and the 2017-2018 seasons. The distributions appear fairly similar, however we do see some subtle differences particularly in the 35-40 year demographic as well as evidence that the 2010-2016 seasons may have actually had an older player population than the 2017-2018 seasons.
 
 ![Fig](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/distplot_min_all.png)
 
 **Fig.13: Distribution plot comparing career minutes played entering each of the 2010-2016 seasons (blue curve) and each of the 2017-2018 seasons (red curve)** [Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_distplots_age_minutes.py) <br/>*Additional figure notes: Only includes players averaging 10 minutes per game.*
 
-Fig 13 compares the distribution of all players' career minutes entering a given season. The distributions closely overlap, though the 2010-2016 seasons do seemed to be skewed ever so slightly to the right(higher career minutes), consistent with the age trends in Fig. 12
+Fig 13 compares the distribution of all players' career minutes entering a given season. The distributions closely overlap, though the 2010-2016 seasons do seemed to be skewed ever so slightly to the right (higher career minutes), consistent with the age trends in Fig. 12
 
 We can also look at the demographics of injured player, to see if there are any interesting trends there.
 
@@ -262,7 +262,7 @@ The NBA's schedule can be grueling, particularly during back-to-back sets (two o
 
 **Fig.16:  Back-to-back sets each season** [Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_bar_back_to_backs.py) <br/>*Additional figure notes: A back-to-back set consists of two or more consecutive games that occur on consecutive calendar days.*
 
-Rather than increasing, it's clear that the number of back-to-back sets have been decreasing. I looked into this further and it appears that [the NBA made a concerted effort to reduce back-to-backs in 2015](https://nba.nbcsports.com/2018/08/10/nba-schedule-reduces-back-to-backs-provides-some-mid-season-homecomings/) after player and team complaints. Rather than reduce the number of games played during the regular season, the NBA increased the number of calendar days in the regular season. In order to do this however they've steadily shortened the NBA preseason in order to move the start of the regular season from late October/early November to mid-October. 
+Rather than increasing, it's clear that the number of back-to-back sets have been decreasing. I looked into this further and it appears that [the NBA made a concerted effort to reduce back-to-backs in 2015](https://nba.nbcsports.com/2018/08/10/nba-schedule-reduces-back-to-backs-provides-some-mid-season-homecomings/) after player and team complaints. Rather than reduce the number of games played during the regular season, the NBA increased the number of calendar days in the regular season. In order to do this, however, they've steadily shortened the NBA preseason in order to move the start of the regular season from late October/early November to mid-October. 
 
 #### Timing of Serious Injuries
 
@@ -272,9 +272,9 @@ Figure 17 shows a heatmap of serious injuries occurrences over the course of the
 
 **Fig.17: Heat map of games missed to serious injury events over the course of the season** [Code to recreate plot](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_calendar_heatmap_serious_injuries.py) <br/>*Additional figure notes: excluded events related to personal reasons, rest, sickness; only includes players averaging 10 minutes per game; only includes injuries with injury durations greater than 15 games; 2011 season was a strike shortened season that began in December.*
 
-Note that this plot shows the number of games missed due to serious injury events that occurred in in a given month- NOT the number of games missed that month. For instance if a player tore his ACL in November and was out for the rest of the season, all of those missed games would be counted toward November's total. Two additional notes/caveats when interpreting this plot: (1) April/May will inherently appear to have fewer serious injuries than other months simply because teams may have less than 10 games left in the season at that point;(2) the 2011 season was a strike shortened season that began in December rather than October/November.
+Note that this plot shows the number of games missed due to serious injury events that occurred in in a given month- NOT the number of games missed that month. For instance, if a player tore his ACL in November and was out for the rest of the season, all of those missed games would be counted toward November's total. Two additional notes/caveats when interpreting this plot: (1) April/May will inherently appear to have fewer serious injuries than other months simply because teams may have less than 10 games left in the season at that point;(2) the 2011 season was a strike shortened season that began in December rather than October/November.
 
-Intuitively I expected more serious injures to occur later in the season as players wear down, Figure 17 however suggests that in recent years, the most serious injuries are occurring early in the season.  Could this trend be related to shortened preseasons and an earlier start to the season? A shortened preseason may be hindering player conditioning, placing them in higher risk for injury at the start of the regular season. 
+Intuitively I expected more serious injures to occur later in the season as players wear down. Figure 17, however, suggests that in recent years, the most serious injuries are occurring early in the season.  Could this trend be related to shortened preseasons and an earlier start to the season? A shortened preseason may be hindering player conditioning, placing them in higher risk for injury at the start of the regular season. 
 
 
 ## Conclusions
