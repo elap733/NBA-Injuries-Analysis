@@ -148,12 +148,12 @@ While this project is not the first to use [Prosport Transactions](http://prospo
 Figure 3, a count of injury events each season, gives the impression that the NBA's injury posture is better today (the 2017 and 2018 seasons) than it was in the recent past (2010-2013). Figure 4 however, which shows the count of missed games each season due to injury, presents a very different story, as the 2017 and 2018 seasons appear to have the highest missed games totals in the past 9 years.
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_all_injuries_c2018.png)
-*Fig.4: Count of **missed games** each season. [Figure notes: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game].[Link to code to create plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_bar_missed_games_all_injuries_c2018.py)*
+*Fig.4: Count of **missed games** each season.[Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_bar_missed_games_all_injuries_c2018.py) <br/>[Figure notes: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game].*
 
 Likewise, Figures 5  provides evidence that the last two seasons have experienced an increase in the number of games missed due to _serious_ injury  (injury duration > 15 games) relative to the prior 7 seasons. 
 
 ![Ouch](https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/bar_missed_games_serious_injuries_c2018.png)
-*Fig.5: Count of **missed games due to serious injuries** each season. [Figure notes: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game].[Link to code to create plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_bar_missed_games_serious_injuries.py)*
+*Fig.5: Count of **missed games due to serious injuries** each season. [Link to code to create plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_bar_missed_games_serious_injuries.py) <br/>[Figure notes: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game].*
 
 One can argue that from the perspective of both teams and fans, its not the number of injury events that really matters, but rather the number of games missed.
 
