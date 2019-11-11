@@ -181,7 +181,7 @@ max_size = 2000
 max_value = dataset.values.max()
 
 #Adjust DPI to control size of plot    
-dpi = 110
+dpi = 115
 im_data = plt.imread(image_filepath)
 height, width, depth = im_data.shape
 
@@ -223,7 +223,7 @@ ax.text(0.85, 0.65, str(int(200)), transform=ax.transAxes, fontsize=18, weight =
 ax.text(-0.50, 0.71, ('{}/{} Season '.format(year, (year+1))), transform=ax.transAxes, fontsize=24, weight ='bold', verticalalignment='top')    
   
 # text box two
-ax.text(0.685, 0.73, 'Missed Games', transform=ax.transAxes, fontsize=20, weight ='bold', verticalalignment='top')    
+legend = ax.text(0.685, 0.73, 'Missed Games', transform=ax.transAxes, fontsize=20, weight ='bold', verticalalignment='top')    
 
 # text box two
 title = ax.text(-0.50, 0.62, 'Serious Injuries', transform=ax.transAxes, fontsize=24,weight ='bold', verticalalignment='top')   
@@ -233,4 +233,4 @@ plt.show()
 
 #----------------------Save plot---------------------------------------------
 fig = ax.get_figure()
-fig.savefig(plot_savepath, dpi = 300, bbox_extra_artists=(title,), bbox_inches='tight')
+fig.savefig(plot_savepath, dpi = 300, bbox_extra_artists=(title,legend), bbox_inches='tight')

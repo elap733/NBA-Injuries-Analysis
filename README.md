@@ -197,6 +197,8 @@ Alternatively we can limit our analysis to serious injuries (more than 15 games 
 <p align="center">
 <img src="https://github.com/elap733/NBA-Injuries-Analysis/blob/master/results/01_plots/body_map_serious_injuries2018.png">
 </p>
+
+
 **Fig.10: Mapping of 2018-2019 missed games due to serious injury to specific body parts. Circle size is proportional to number of missed games** [Code to recreate plot]( https://github.com/elap733/NBA-Injuries-Analysis/blob/master/src/d04_visualization/plot_body_map_serious_injuries.py) <br/>*Additional figure notes: excluded events related to personal reasons, rest, sickness; included only players averaging 10 minutes per game.*
 
 In Figure 9 and Figure 10 above, we see that ankle, knee, and foot account for the majority of serious injuries - a relatively consistent trend across seasons. 
@@ -292,30 +294,23 @@ This analysis of NBA injuries (2010-2018 seasons) revealed that missed games and
 
 **Data**
 
-​			**01_raw** - Uncleaned scraped datasets
-
-​			**02_cleaned** - Cleaned datasets
-
-​			**03_processed** - Processed datasets
+- **01_raw** - Uncleaned scraped datasets
+- **02_cleaned** - Cleaned datasets
+- **03_processed** - Processed datasets 
 
 **References**
 
-​			**01_dictionaries** - Team abbreviations and team nicknames dictionaries
-
-​			**02_images** - Images found in readme
+- **01_dictionaries** - Team abbreviations and team nicknames dictionaries
+- **02_images** - Images found in readme
 
 **Results**
 
-​			**01_plots** - All plots and figures
+- **01_plots** - All plots and figures
 
 **SRC** (source code)
 
-​			**d00_utils** - Code to create team dictionary
-
-​			**d01_scrapes** - All code for scraping data
-
-​			**d02_clean** - All code for cleaning data
-
-​			**d03_process** - All code for processing cleaned data
-
-​			**d04_visualizations** - All code for creating visualizations
+- **d00_utils** - Code to create team dictionary
+- **d01_scrapes** - All code for scraping data
+- **d02_clean** - All code for cleaning data
+- **d03_process** - All code for processing cleaned data
+- **d04_visualizations** - All code for creating visualizations
